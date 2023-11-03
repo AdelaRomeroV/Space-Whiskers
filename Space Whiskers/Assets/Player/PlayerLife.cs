@@ -11,6 +11,7 @@ public class PlayerLife : MonoBehaviour
     [Header("Life")]
     public float life;
     public float Energy;
+    public float timer;
    
 
     private Player player;
@@ -19,17 +20,23 @@ public class PlayerLife : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
-
+    private void Update()
+    {
+        Regeneracion();
+    }
     public void Regeneracion()
     {
 
-        if (Energy >= 30 && Input.GetKeyDown(KeyCode.Q) && life < 3)
+        if (Energy >= 30 && Input.GetKey(KeyCode.Q) && life <= 3)
         {
+            if (timer < Time.time)
+            {
                 Energy -= 15;
                 life += 1f;
+                timer = 1.5f + Time.time;
+            }
         }
     }
 
 
-    
 }

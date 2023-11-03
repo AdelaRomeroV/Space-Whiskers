@@ -480,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 1
   Energy: 30
+  timer: 1.5
 --- !u!114 &1395173733
 MonoBehaviour:
   m_ObjectHideFlags: 0
