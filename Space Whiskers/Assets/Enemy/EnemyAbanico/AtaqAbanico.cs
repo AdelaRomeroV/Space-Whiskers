@@ -1,6 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting.Antlr3.Runtime;
-using UnityEditor;
 using UnityEngine;
 
 public class AtaqAbanico : MonoBehaviour
@@ -22,29 +20,23 @@ public class AtaqAbanico : MonoBehaviour
         InvokeRepeating("PersonalizedUpdate", 0f, updateInterval);
     }
 
-    private void Update()
-    {
-    
-    }
-
-
     private void PersonalizedUpdate()
     {
-        isPlayerInRange = detection();
+        isPlayerInRange = detectionAtaq();
     }
-    private bool detection()
+
+    private bool detectionAtaq()
     {
         isPlayerInRange = Physics2D.OverlapCircle(transform.position, chekRaius, whatisPlayer);
         if (isPlayerInRange)
         {
             Play();
         }
-        else 
+        else
         {
             Stop();
         }
         return isPlayerInRange;
-
     }
 
     public void Play() { StartCoroutine(Begin()); }
@@ -76,9 +68,10 @@ public class AtaqAbanico : MonoBehaviour
             if (datos.timeDelay != 0) yield return new WaitForSeconds(datos.timeDelay);
         }
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, chekRaius); 
+        Gizmos.DrawWireSphere(transform.position, chekRaius);
     }
 }

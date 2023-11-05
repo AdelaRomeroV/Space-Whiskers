@@ -35,7 +35,7 @@ public class EnemyDis : MonoBehaviour
 
             if (detection() == true) 
             {
-                StartCoroutine(Shoot()); 
+                StartCoroutine(Shoot());
             }
             else
             {
@@ -67,7 +67,6 @@ public class EnemyDis : MonoBehaviour
     {
         return Physics2D.OverlapCircle(transform.position, chekRaius, whatisPlayer);
     }
-
 
     private void OnDrawGizmos()
     {

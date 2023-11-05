@@ -16,5 +16,5 @@ MonoBehaviour:
   proyectilPerBurst: 3
   burstAngle: 30
   timeDelay: 0
-  startingDistance: 0
+  startingDistance: 0.8
   timeBetweenBurst: 0.5
