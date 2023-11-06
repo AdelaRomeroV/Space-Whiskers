@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6029937580929267237}
   - component: {fileID: 2363689271532572776}
   - component: {fileID: 643411212829912751}
-  - component: {fileID: -3178631758167201635}
   - component: {fileID: 7194249789410987203}
   - component: {fileID: -7100066288398999243}
   m_Layer: 0
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 123271385
-  m_SortingLayer: 8
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.990566, g: 0.5163772, b: 0, a: 1}
@@ -101,20 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
---- !u!114 &-3178631758167201635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986443065251225456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ead7a52424dd9854392abe578c6e6c6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  dir: {x: 0, y: 0}
 --- !u!58 &7194249789410987203
 CircleCollider2D:
   m_ObjectHideFlags: 0

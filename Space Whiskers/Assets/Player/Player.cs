@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
     void UltiShooting()
     {
         PlayerLife life = GetComponent<PlayerLife>();
-        if (bulletType == 0 && life.Energy >= 30 && Input.GetKeyDown(KeyCode.E))
+        if (bulletType == 0 && life.energy >= 30 && Input.GetKeyDown(KeyCode.E))
         {
             bulletType = 1;
             StartCoroutine(State(life));
@@ -93,9 +93,9 @@ public class Player : MonoBehaviour
     private IEnumerator State(PlayerLife life)
     {
         yield return new WaitForSeconds(2);
-        life.Energy -= 5;
-        life.Energy = Mathf.Clamp(life.Energy, 0, int.MaxValue);
-        if (life.Energy > 0)
+        life.energy -= 5;
+        life.energy = Mathf.Clamp(life.energy, 0, int.MaxValue);
+        if (life.energy > 0)
         {
             StartCoroutine(State(life));
         }
