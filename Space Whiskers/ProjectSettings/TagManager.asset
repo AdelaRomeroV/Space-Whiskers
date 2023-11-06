@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - EnemyCir
+  - Spawn
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -43,6 +47,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1660080187
+    locked: 0
+  - name: ArmaPlayer
+    uniqueID: 1894168297
     locked: 0
   - name: Canvas
     uniqueID: 666126111
