@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     [Header("Weapon")]
     public Transform weapon;
-    private float offset = 90f;
+    private float offset = 180f;
 
     [Header("Disparo")]
     public Transform shotPoint;
