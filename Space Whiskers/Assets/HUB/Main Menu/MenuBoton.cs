@@ -1,19 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuBoton : MonoBehaviour
 {
-    public void Play()
+    public void NextScena(int scene)
     {
-        SceneManager.LoadScene(2);
-        Debug.Log("funciona");
-    }
-
-    public void Salir()
-    {
-        Debug.Log("Salir");
+        SceneManager.LoadScene(scene); 
     }
 
 }
