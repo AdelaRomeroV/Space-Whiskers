@@ -5,18 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class CambioDeEscena : MonoBehaviour
 {
-    public string escenasiguiente;
-    public KeyCode teclaparaavanzar = KeyCode.KeypadEnter;
-
-    void Update()
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Input.GetKeyDown(teclaparaavanzar))
+        if(collision.gameObject.tag == "CambioNivel")
         {
-            CargarEscenaSiguiente();
+            int nivelActual = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(nivelActual + 1);
         }
-    }
-    public void CargarEscenaSiguiente()
-    {
-        SceneManager.LoadScene(escenasiguiente);
     }
 }
