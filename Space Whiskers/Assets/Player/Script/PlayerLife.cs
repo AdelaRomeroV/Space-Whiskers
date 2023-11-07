@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using static UnityEditor.Progress;
 using UnityEngine.SceneManagement;
 using System.Threading;
 
@@ -45,9 +44,8 @@ public class PlayerLife : MonoBehaviour
 
                 if (life <= 0)
                 {
-                    //Destroy(gameObject);
-                    //GetComponent<UI_Escena>();
-                    //SceneManager.LoadScene(6);
+                    Destroy(gameObject);                    
+                    SceneManager.LoadScene(5);
                 }
             }
 
@@ -57,9 +55,8 @@ public class PlayerLife : MonoBehaviour
 
             if (life <= 0)
             {
-                //Destroy(gameObject);
-                //GetComponent<UI_Escena>();
-                //SceneManager.LoadScene(6);
+                Destroy(gameObject);
+                SceneManager.LoadScene(5);
             }
         }
     }
