@@ -7,7 +7,7 @@ public class CambioDeEscena : MonoBehaviour
 {
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "CambioNivel")
+        if(collision.gameObject.tag == "Player")
         {
             int nivelActual = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(nivelActual + 1);

@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c101cf08f96c4e4496f97d1d6950d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 1567909410}
   player: {fileID: 1913110432}
   threshold: 2.5
 --- !u!1 &1567909408
