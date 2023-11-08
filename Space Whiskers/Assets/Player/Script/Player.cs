@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
         {
             if (Time.time > nextShoop)
             {
-                if (metra == true && balas >= 1)
+                if (metra == true && balas >= 1 && bulletType == 0)
                 {
                     Balas();
                 }
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
         if (balas <= 0)
         {
             recuperacion -= Time.deltaTime;
-            if (recuperacion <= 0)
+            if (recuperacion <= 0 && bulletType != 0)
             {
                 balas = 100;
                 recuperacion = 10f;
