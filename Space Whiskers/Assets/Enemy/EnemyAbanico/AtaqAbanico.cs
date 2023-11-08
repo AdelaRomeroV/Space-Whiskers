@@ -15,6 +15,10 @@ public class AtaqAbanico : MonoBehaviour
     private bool isPlayerInRange = false;
     private float updateInterval = 1f;
 
+    private void Awake()
+    {
+        target = GameObject.FindWithTag("Player").transform;
+    }
     private void Start()
     {
         InvokeRepeating("PersonalizedUpdate", 0f, updateInterval);
