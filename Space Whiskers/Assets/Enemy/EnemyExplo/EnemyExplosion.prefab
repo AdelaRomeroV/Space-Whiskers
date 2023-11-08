@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6987362986652483900}
   - component: {fileID: -3529844800881698053}
   - component: {fileID: 6559099943721238212}
-  - component: {fileID: 2656326652110697020}
+  - component: {fileID: 5744983528219005987}
   m_Layer: 0
   m_Name: EnemyExplosion
   m_TagString: Enemy
@@ -194,7 +194,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2265997350699650800}
   cambioDeColorIntervalo: 0.6
   fxExplosion: {fileID: 563870731589124087, guid: 96fea728103b78b45be5bc5474dcba72, type: 3}
---- !u!114 &2656326652110697020
+--- !u!114 &5744983528219005987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,10 +203,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3573957098040902408}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6c09423af07c44b80060e459b6b8c9, type: 3}
+  m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedE: 6
-  range: 0.33
-  movementArea: {fileID: 0}
-  movSprite: {fileID: 0}
+  life: 5

@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
-  Energy: 30
+  energy: 0
   timer: 1.5
 --- !u!114 &1316853187
 MonoBehaviour:

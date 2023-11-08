@@ -9,6 +9,7 @@ TagManager:
   - EnemyBullet
   - CambioNivel
   - Energy
+  - Pate
   layers:
   - Default
   - TransparentFX

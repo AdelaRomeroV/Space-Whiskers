@@ -24,7 +24,7 @@ public class PlayerLife : MonoBehaviour
     public void Regeneracion()
     {
 
-        if (energy >= 30 && Input.GetKey(KeyCode.Q) && life < 3)
+        if (energy >= 30 && Input.GetKey(KeyCode.Q) && life <= 5)
         {
             if (timer < Time.time)
             {
@@ -38,16 +38,16 @@ public class PlayerLife : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-            if (collision.gameObject.CompareTag("Enemy"))
-            {
-                life -= collision.gameObject.GetComponent<Damage>().damage;
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            life -= collision.gameObject.GetComponent<Damage>().damage;
 
-                if (life <= 0)
-                {
+            if (life <= 0)
+            {
                     Destroy(gameObject);                    
                     SceneManager.LoadScene(5);
-                }
             }
+        }
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -73,7 +73,17 @@ public class PlayerLife : MonoBehaviour
             {
                 energy = 30;
             }
+        }
 
+        if(collision.gameObject.CompareTag("Pate"))
+        {
+            Destroy(collision.gameObject);
+            life += collision.gameObject.GetComponent<Items>().lifeMax;
+
+            if(life >= 5)
+            {
+                life = 5;
+            }
         }
     }
 }

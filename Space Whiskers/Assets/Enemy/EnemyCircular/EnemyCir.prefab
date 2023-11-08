@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 1980486167164575074}
   - component: {fileID: 3283152424417352992}
   - component: {fileID: 5409135306899709866}
-  - component: {fileID: 4755803322223192183}
+  - component: {fileID: 6541335734425939499}
   m_Layer: 6
   m_Name: EnemyCir
   m_TagString: Enemy
@@ -207,7 +207,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4755803322223192183
+--- !u!114 &6541335734425939499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,10 +216,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8009200743665594231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6c09423af07c44b80060e459b6b8c9, type: 3}
+  m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedE: 5
-  range: 11.1
-  movementArea: {fileID: 0}
-  movSprite: {fileID: 0}
+  life: 6
