@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 6
+  prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
 --- !u!1 &5025654573526957921
 GameObject:
   m_ObjectHideFlags: 0

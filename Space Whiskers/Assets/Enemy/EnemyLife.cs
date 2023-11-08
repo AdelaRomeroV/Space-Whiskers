@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyLife : MonoBehaviour
 {
     public float life;
+    public GameObject prefab;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +16,7 @@ public class EnemyLife : MonoBehaviour
 
             if (life <= 0)
             {
+                if (prefab != null) { Instantiate(prefab, transform.position, Quaternion.identity); }
                 Destroy(gameObject);
             }
         }

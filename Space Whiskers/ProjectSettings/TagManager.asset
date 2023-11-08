@@ -10,6 +10,7 @@ TagManager:
   - CambioNivel
   - Energy
   - Pate
+  - Bullet
   layers:
   - Default
   - TransparentFX
