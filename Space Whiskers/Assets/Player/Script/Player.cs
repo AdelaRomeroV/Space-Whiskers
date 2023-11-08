@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -28,6 +27,12 @@ public class Player : MonoBehaviour
     private int bulletType;
     public float segundos;
 
+    [Header("Metralleta")]
+    private float dispersionMax = 20f;
+    private int balas = 100;
+    private float recuperacion = 10f;
+    private bool metra = false;
+
     void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -38,12 +43,12 @@ public class Player : MonoBehaviour
         rb2D.MovePosition(rb2D.position + playerInput * movSpeed * Time.deltaTime);
     }
 
-    // Update is called once per frame
     void Update()
     {
         Mov();
         Rot();
         Shooting();
+        Metralleta();
         activarDash();
         UltiShooting();
     }
@@ -69,11 +74,47 @@ public class Player : MonoBehaviour
         {
             if (Time.time > nextShoop)
             {
-                nextShoop = Time.time + timerShots;
-                Instantiate(bullet[bulletType], shotPoint.position, shotPoint.rotation);
+                if (metra == true && balas >= 1)
+                {
+                    Balas();
+                }
+                else
+                {
+                    nextShoop = Time.time + timerShots;
+                    Instantiate(bullet[bulletType], shotPoint.position, shotPoint.rotation);
+                }
             }
         }
 
+    }
+
+    void Balas()
+    {
+        float dispersionActual = Random.Range(-dispersionMax, dispersionMax);
+
+        Quaternion dispersion = Quaternion.Euler(0, 0, dispersionActual);
+
+        balas--;
+        nextShoop = Time.time + 0.1f;
+        Instantiate(bullet[bulletType], shotPoint.position, shotPoint.rotation * dispersion);
+    }
+
+    void Metralleta()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            metra = true;
+        }
+        if (balas <= 0)
+        {
+            recuperacion -= Time.deltaTime;
+            if (recuperacion <= 0)
+            {
+                balas = 100;
+                recuperacion = 10f;
+            }
+            bulletType = 0;
+        }
     }
 
     void UltiShooting()
