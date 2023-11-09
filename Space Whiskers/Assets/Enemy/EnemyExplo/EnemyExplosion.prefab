@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c15c3663e7a3d0438c3bd84927689aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chekRaius: 19.1
+  chekRaius: 21.3
   attackRadius: 1.5
   whatisPlayer:
     serializedVersion: 2
