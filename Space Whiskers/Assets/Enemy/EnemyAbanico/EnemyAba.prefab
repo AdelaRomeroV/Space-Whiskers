@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2257608328185499300}
   - component: {fileID: 486924406034175520}
   - component: {fileID: 7231352832083828695}
-  - component: {fileID: 7543068066879849682}
+  - component: {fileID: 7560155429715556720}
   - component: {fileID: 8886005612864835774}
   - component: {fileID: -9221367115069229785}
   m_Layer: 6
@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 937545634461141620}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.9, y: -166, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 0.6167}
+  m_LocalPosition: {x: 13.4485, y: -167.3883, z: 0}
+  m_LocalScale: {x: 5.403121, y: 5.276558, z: 0.6167}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3096412738144394959}
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7543068066879849682
+--- !u!114 &7560155429715556720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,13 +172,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 937545634461141620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6c09423af07c44b80060e459b6b8c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c02807b8ecb7754a99dd884bde2e931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedE: 5
-  range: 1
-  movementArea: {fileID: 937545634461141620}
-  movSprite: {fileID: 486924406034175520}
+  speed: 6
+  stoppingDistancia: 5
+  retreatDistancie: 5
 --- !u!114 &8886005612864835774
 MonoBehaviour:
   m_ObjectHideFlags: 0

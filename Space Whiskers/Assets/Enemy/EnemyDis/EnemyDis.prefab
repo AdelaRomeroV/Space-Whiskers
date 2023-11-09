@@ -63,8 +63,8 @@ Transform:
   m_GameObject: {fileID: 652064025043050211}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.47, y: 1.42, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 13.176, y: 1.8186, z: 0}
+  m_LocalScale: {x: 4.071934, y: 3.692078, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8712531069025444374}
@@ -200,7 +200,7 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
-  chekRaius: 3.55
+  chekRaius: 6.04
   BulletEnemy: {fileID: 4383393682009695133, guid: 18c9ae139a584b8459b2805f147e895d, type: 3}
   cooldown: 1.5
   cooldownTime: 0.1
