@@ -48,11 +48,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ground
+    uniqueID: 3988355869
+    locked: 0
   - name: Player
     uniqueID: 1660080187
     locked: 0
   - name: ArmaPlayer
     uniqueID: 1894168297
+    locked: 0
+  - name: enemy
+    uniqueID: 3210295595
+    locked: 0
+  - name: bullet
+    uniqueID: 3352378645
     locked: 0
   - name: Canvas
     uniqueID: 666126111
