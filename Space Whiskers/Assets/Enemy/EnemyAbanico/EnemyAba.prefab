@@ -196,7 +196,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   chekRaius: 7.7
-  offet: 45
+  offet: 75
 --- !u!114 &-9221367115069229785
 MonoBehaviour:
   m_ObjectHideFlags: 0
