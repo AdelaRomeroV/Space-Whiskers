@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Explosion : MonoBehaviour
 {
@@ -38,6 +39,11 @@ public class Explosion : MonoBehaviour
             if (timer <= 0)
             {
                 player.life = player.life - GetComponent<Damage>().damage;
+                if (player.life <= 0)
+                {
+                    Destroy(gameObject);
+                    SceneManager.LoadScene(5);
+                }
                 Instantiate(fxExplosion, transform.position, transform.rotation);
                 Destroy(gameObject);
             }

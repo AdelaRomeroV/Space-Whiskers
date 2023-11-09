@@ -10,6 +10,9 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
     public float retreatDistancie;
 
     private Transform Player;
+
+    public float detectionRadius; 
+    public LayerMask playerLayer;
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -18,19 +21,24 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, Player.position) > stoppingDistancia)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
-        }
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
 
-        else if (Vector2.Distance(transform.position, Player.position) < stoppingDistancia && Vector2.Distance(transform.position, Player.position) > retreatDistancie)
+        if (colliders.Length > 0)
         {
-            transform.position = this.transform.position;
-        }
+            if (Vector2.Distance(transform.position, Player.position) > stoppingDistancia)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+            }
 
-        else if (Vector2.Distance(transform.position, Player.position) < retreatDistancie)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, Player.position, -speed * Time.deltaTime); ;
+            else if (Vector2.Distance(transform.position, Player.position) < stoppingDistancia && Vector2.Distance(transform.position, Player.position) > retreatDistancie)
+            {
+                transform.position = this.transform.position;
+            }
+
+            else if (Vector2.Distance(transform.position, Player.position) < retreatDistancie)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Player.position, -speed * Time.deltaTime); ;
+            }
         }
     }
 }

@@ -22,13 +22,14 @@ public class AtaqCircular : MonoBehaviour
 
     private bool isShooting = false;
 
+    private void Awake()
+    {
+        target = GameObject.FindWithTag("Player").transform;
+    }
+
     private void Start()
     {
         InvokeRepeating("PersonalizedUpdate", 0f, updateInterval);
-    }
-    private void Update()
-    {
-
     }
 
     private void PersonalizedUpdate()

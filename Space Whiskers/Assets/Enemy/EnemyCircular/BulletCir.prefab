@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 643411212829912751}
   - component: {fileID: 7194249789410987203}
   - component: {fileID: -7100066288398999243}
-  m_Layer: 0
+  - component: {fileID: -4200596230538598982}
+  m_Layer: 6
   m_Name: BulletCir
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5caada84d4c1a468073aeca3a7ff1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 4
+  damage: 1
 --- !u!58 &7194249789410987203
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -129,7 +130,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -162,3 +163,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4200596230538598982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986443065251225456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68fe8289eda7c9a41bd5ffb37b4a2f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dir: {x: 0, y: 0}
+  speed: 5

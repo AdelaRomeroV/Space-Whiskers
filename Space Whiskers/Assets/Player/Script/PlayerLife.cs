@@ -86,5 +86,16 @@ public class PlayerLife : MonoBehaviour
                 life = 5;
             }
         }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            life -= collision.gameObject.GetComponent<Damage>().damage;
+
+            if (life <= 0)
+            {
+                Destroy(gameObject);
+                SceneManager.LoadScene(5);
+            }
+        }
     }
 }
