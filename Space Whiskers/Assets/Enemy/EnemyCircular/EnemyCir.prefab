@@ -52,7 +52,7 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
-  chekRaius: 40
+  chekRaius: 36.8
   isPlayerInRange: 0
   updateInterval: 1
   cooldown: 3
@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 3283152424417352992}
   - component: {fileID: 5409135306899709866}
   - component: {fileID: 6541335734425939499}
+  - component: {fileID: 658068936839585301}
   m_Layer: 6
   m_Name: EnemyCir
   m_TagString: Enemy
@@ -131,8 +132,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 585022483
-  m_SortingLayer: 0
+  m_SortingLayerID: -1084671701
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.754717, g: 0.24469513, b: 0, a: 1}
@@ -160,7 +161,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -219,5 +220,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 6
+  life: 10
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
+--- !u!114 &658068936839585301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8009200743665594231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6c09423af07c44b80060e459b6b8c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedE: 6
+  range: 2.02
+  movementArea: {fileID: 0}
+  movSprite: {fileID: 0}
