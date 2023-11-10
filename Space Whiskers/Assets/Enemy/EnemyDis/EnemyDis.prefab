@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.176, y: 1.8186, z: 0}
-  m_LocalScale: {x: 2.7624002, y: 2.501383, z: 1}
+  m_LocalScale: {x: 2.147, y: 2.147, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8712531069025444374}
@@ -108,8 +108,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1084671701
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.6886792, g: 0, b: 0, a: 1}
@@ -200,7 +200,7 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
-  chekRaius: 17.89
+  chekRaius: 15
   offet: 90
 --- !u!114 &1193567308724524799
 MonoBehaviour:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 6
+  life: 10
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
 --- !u!114 &5220362997709895642
 MonoBehaviour:
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c381657fb407676468b727468c55fe37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwShots: 0.5
+  startTimeBtwShots: 0.25
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8

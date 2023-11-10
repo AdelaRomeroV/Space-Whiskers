@@ -8,7 +8,6 @@ public class Explosion : MonoBehaviour
 {
     [Header("Ataque")]
     public float chekRaius;
-    public float attackRadius;
     private float timer = 0;
 
     public LayerMask whatisPlayer;

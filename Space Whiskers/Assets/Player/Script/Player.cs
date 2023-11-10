@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
     [Header("Metralleta")]
     private float dispersionMax = 20f;
-    private int balas = 100;
+    private int balas = 30;
     private float recuperacion = 10f;
     private bool metra = false;
 
@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
 
         balas--;
         nextShoop = Time.time + 0.1f;
-        Instantiate(bullet[bulletType], shotPoint.position, shotPoint.rotation * dispersion);
+        Instantiate(bullet[2], shotPoint.position, shotPoint.rotation * dispersion);
     }
 
     void Metralleta()
@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
             recuperacion -= Time.deltaTime;
             if (recuperacion <= 0 && bulletType != 0)
             {
-                balas = 100;
+                balas = 30;
                 recuperacion = 10f;
             }
             bulletType = 0;
