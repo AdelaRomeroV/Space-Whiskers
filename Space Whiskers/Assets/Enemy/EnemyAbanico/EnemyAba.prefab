@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1084671701
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.3018868, g: 0.05525096, b: 0.05525096, a: 1}
@@ -106,7 +106,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -178,6 +178,10 @@ MonoBehaviour:
   speed: 6
   stoppingDistancia: 5
   retreatDistancie: 5
+  detectionRadius: 30
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &8886005612864835774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +198,7 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
-  chekRaius: 7.7
+  chekRaius: 12.81
   offet: 75
 --- !u!114 &-9221367115069229785
 MonoBehaviour:
@@ -208,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
+  life: 8
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
 --- !u!1 &1340141008269091952
 GameObject:
@@ -261,7 +265,7 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
-  chekRaius: 7.7
+  chekRaius: 12.81
 --- !u!1 &3036183594158413507
 GameObject:
   m_ObjectHideFlags: 0
