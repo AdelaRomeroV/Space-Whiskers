@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public float dashCoolDown;
     private bool isDah;
     private bool canDash;
+    public float ignoreCollisionDuration = 5f;
+    private float ignoreCollisionTimer = 0f;
 
     [Header("Weapon")]
     public Transform weapon;
@@ -51,6 +53,19 @@ public class Player : MonoBehaviour
         Metralleta();
         activarDash();
         UltiShooting();
+        Timer();
+    }
+
+    void Timer()
+    {
+        if (ignoreCollisionTimer > 0)
+        {
+            ignoreCollisionTimer -= Time.deltaTime;
+            if (ignoreCollisionTimer <= 0)
+            {
+                Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BulletEnemy"), false);
+            }
+        }
     }
     
     void Mov()
@@ -150,8 +165,10 @@ public class Player : MonoBehaviour
     {
         canDash = false;
         isDah = true;
+        Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BulletEnemy"), true);
         playerInput = new Vector2(playerInput.x * dashSpeed, playerInput.y * dashSpeed);
         yield return new WaitForSeconds(dashDuration);
+        ignoreCollisionTimer = ignoreCollisionDuration;
         isDah = false;
         yield return new WaitForSeconds(dashCoolDown);
         canDash = true;

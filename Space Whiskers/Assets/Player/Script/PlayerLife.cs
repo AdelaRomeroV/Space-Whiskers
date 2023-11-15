@@ -12,10 +12,13 @@ public class PlayerLife : MonoBehaviour
     public float energy;
     public float timer;
     private Player player;
+    public HealthBar healthBar;
+
 
     private void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        healthBar = GetComponentInChildren<HealthBar>();
     }
     private void Update()
     {
@@ -31,6 +34,7 @@ public class PlayerLife : MonoBehaviour
                 energy -= 15;
                 life += 1f;
                 timer = 1.5f + Time.time;
+                if (healthBar != null) { healthBar.UpdateHealthBar(); }
             }
         }
     }
@@ -41,6 +45,7 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
             life -= collision.gameObject.GetComponent<Damage>().damage;
+            if (healthBar != null) { healthBar.UpdateHealthBar(); }
             Destroy(collision.gameObject);
 
             if (life <= 0)
@@ -53,6 +58,7 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             life -= collision.gameObject.GetComponent<Damage>().damage;
+            if (healthBar != null) { healthBar.UpdateHealthBar(); }
 
             if (life <= 0)
             {
@@ -80,8 +86,9 @@ public class PlayerLife : MonoBehaviour
         {
             Destroy(collision.gameObject);
             life += collision.gameObject.GetComponent<Items>().lifeMax;
+            if (healthBar != null) { healthBar.UpdateHealthBar(); }
 
-            if(life >= 5)
+            if (life >= 5)
             {
                 life = 5;
             }
@@ -90,6 +97,7 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             life -= collision.gameObject.GetComponent<Damage>().damage;
+            if (healthBar != null) { healthBar.UpdateHealthBar(); }
 
             if (life <= 0)
             {
