@@ -24,7 +24,7 @@ public class PlayerLife : MonoBehaviour
     public void Regeneracion()
     {
 
-        if (energy >= 30 && Input.GetKey(KeyCode.Q) && life <= 5)
+        if (energy >= 15 && Input.GetKey(KeyCode.Q) && life < 4)
         {
             if (timer < Time.time)
             {

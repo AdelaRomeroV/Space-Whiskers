@@ -20,8 +20,12 @@ public class CambioDeAtaque : MonoBehaviour
         switch (numeroDeAtaque)
         { 
             case 0:
+                metodos.datos = parametros[1];
+                yield return new WaitForSeconds(2f);
                 metodos.datos =parametros[0];
-                yield return new WaitForSeconds(10f);
+                yield return new WaitForSeconds(5f);
+                metodos.datos = parametros[1];
+                yield return new WaitForSeconds(2f);
                 break;
             case 1:
                 metodos.datos =parametros[1];

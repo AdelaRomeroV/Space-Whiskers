@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
         {
             if (Time.time > nextShoop)
             {
-                if (metra == true && balas >= 1 && bulletType == 0)
+                if (metra == true && balas >= 1 && bulletType != 1)
                 {
                     Balas();
                 }

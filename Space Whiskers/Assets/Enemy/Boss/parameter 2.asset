@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1ce60f072be8d428f7d50b59c5d16b, type: 3}
   m_Name: parameter 2
   m_EditorClassIdentifier: 
-  focusTarget: 0
-  proyectilPerBurst: 35
-  burstAngle: 360
-  timeDelay: 0.05
-  startingDistance: 0.1
+  focusTarget: 1
+  proyectilPerBurst: 10
+  burstAngle: 180
+  timeDelay: 0.1
+  startingDistance: 3
   timeBetweenBurst: 1
