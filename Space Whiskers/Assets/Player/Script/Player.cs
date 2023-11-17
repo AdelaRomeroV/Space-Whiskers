@@ -35,8 +35,11 @@ public class Player : MonoBehaviour
     private float recuperacion = 10f;
     private bool metra = false;
 
+    private PlayerLife vidaJugador;
+
     void Awake()
     {
+        vidaJugador = GetComponent<PlayerLife>();
         rb2D = GetComponent<Rigidbody2D>();
         canDash = true;
     }
@@ -47,13 +50,16 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Mov();
-        Rot();
-        Shooting();
-        Metralleta();
-        activarDash();
-        UltiShooting();
-        Timer();
+        if(vidaJugador.life > 0)
+        {
+            Mov();
+            Rot();
+            Shooting();
+            Metralleta();
+            activarDash();
+            UltiShooting();
+            Timer();
+        }
     }
 
     void Timer()

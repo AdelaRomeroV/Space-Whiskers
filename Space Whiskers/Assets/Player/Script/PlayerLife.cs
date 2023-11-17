@@ -13,6 +13,7 @@ public class PlayerLife : MonoBehaviour
     public float timer;
     private Player player;
     public HealthBar healthBar;
+    public bool seQuitoVida = false;
 
 
     private void Awake()
@@ -23,6 +24,11 @@ public class PlayerLife : MonoBehaviour
     private void Update()
     {
         Regeneracion();
+    }
+
+    private void FixedUpdate()
+    {
+        seQuitoVida = false;
     }
     public void Regeneracion()
     {
@@ -45,26 +51,16 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
             life -= collision.gameObject.GetComponent<Damage>().damage;
+            seQuitoVida = true;
             if (healthBar != null) { healthBar.UpdateHealthBar(); }
             Destroy(collision.gameObject);
-
-            if (life <= 0)
-            {
-                    Destroy(gameObject);                    
-                    SceneManager.LoadScene(5);
-            }
         }
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
             life -= collision.gameObject.GetComponent<Damage>().damage;
+            seQuitoVida = true;
             if (healthBar != null) { healthBar.UpdateHealthBar(); }
-
-            if (life <= 0)
-            {
-                Destroy(gameObject);
-                SceneManager.LoadScene(5);
-            }
         }
     }
 
@@ -97,13 +93,13 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             life -= collision.gameObject.GetComponent<Damage>().damage;
+            seQuitoVida = true;
             if (healthBar != null) { healthBar.UpdateHealthBar(); }
-
-            if (life <= 0)
-            {
-                Destroy(gameObject);
-                SceneManager.LoadScene(5);
-            }
         }
+    }
+
+    public void ManejorDeMuerte()
+    {
+        SceneManager.LoadScene(5);
     }
 }
