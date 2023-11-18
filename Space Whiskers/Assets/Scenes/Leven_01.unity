@@ -995,6 +995,10 @@ MonoBehaviour:
   dashCoolDown: 0.2
   ignoreCollisionDuration: 5
   weapon: {fileID: 8346507827450237035}
+  weaponSprites:
+  - {fileID: -582973390, guid: 512a4d5155e340e46a6d5f62c1f453c3, type: 3}
+  - {fileID: -2045156946, guid: 55e988485be4c4940b8489309ce320bb, type: 3}
+  - {fileID: 505032998, guid: 62cd87f1481ce3f40bd4ad6d58131bfe, type: 3}
   shotPoint: {fileID: 6180259476968007383}
   bullet:
   - {fileID: 6269248221625909975, guid: c15c307da431ccd409b4c302c105f019, type: 3}
@@ -1155,6 +1159,7 @@ MonoBehaviour:
   energy: 30
   timer: 1.5
   healthBar: {fileID: 0}
+  seQuitoVida: 0
 --- !u!212 &6467380646047709341
 SpriteRenderer:
   m_ObjectHideFlags: 0

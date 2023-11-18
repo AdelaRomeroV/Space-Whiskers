@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     [Header("Weapon")]
     public Transform weapon;
+    public Sprite[] weaponSprites;
     private float offset = 180f;
 
     [Header("Disparo")]
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     private float nextShoop;
     private int bulletType;
     public float segundos;
+    private bool isUltiActive = false;
 
     [Header("Metralleta")]
     private float dispersionMax = 20f;
@@ -54,12 +56,18 @@ public class Player : MonoBehaviour
         {
             Mov();
             Rot();
+            ChangeWeaponSprite();
             Shooting();
             Metralleta();
             activarDash();
             UltiShooting();
             Timer();
         }
+    }
+
+    void ChangeWeaponSprite()
+    {
+        weapon.GetComponent<SpriteRenderer>().sprite = weaponSprites[bulletType];
     }
 
     void Timer()
@@ -122,26 +130,32 @@ public class Player : MonoBehaviour
 
     void Metralleta()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (!isUltiActive)
         {
-            metra = true;
-        }
-        if (balas <= 0)
-        {
-            recuperacion -= Time.deltaTime;
-            if (recuperacion <= 0 && bulletType != 0)
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                balas = 30;
-                recuperacion = 10f;
+                metra = true;
+                bulletType = 2;
             }
-            bulletType = 0;
+
+            if (balas <= 0)
+            {
+                recuperacion -= Time.deltaTime;
+                metra = false;
+                if (recuperacion <= 0 && bulletType != 0)
+                {
+                    balas = 30;
+                    recuperacion = 10f;
+                }
+                bulletType = 0;
+            }
         }
     }
 
     void UltiShooting()
     {
         PlayerLife life = GetComponent<PlayerLife>();
-        if (bulletType == 0 && life.energy >= 30 && Input.GetKeyDown(KeyCode.E))
+        if (!metra && life.energy >= 30 && Input.GetKeyDown(KeyCode.E))
         {
             bulletType = 1;
             StartCoroutine(State(life));
@@ -154,9 +168,11 @@ public class Player : MonoBehaviour
     }
     private IEnumerator State(PlayerLife life)
     {
+        isUltiActive = true;
         yield return new WaitForSeconds(2);
         life.energy -= 5;
         life.energy = Mathf.Clamp(life.energy, 0, int.MaxValue);
+        isUltiActive = false;
         if (life.energy > 0)
         {
             StartCoroutine(State(life));
