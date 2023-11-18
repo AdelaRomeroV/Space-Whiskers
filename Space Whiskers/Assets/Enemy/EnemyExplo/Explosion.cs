@@ -1,80 +1,66 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Explosion : MonoBehaviour
 {
     [Header("Ataque")]
-    public float chekRaius;
-    private float timer = 0;
-
-    public LayerMask whatisPlayer;
-    private PlayerLife player;
-
+    public float checkRadius;
+    public LayerMask whatIsPlayer;
 
     [Header("Pre Animacion")]
     public SpriteRenderer spriteRenderer;
-    public float cambioDeColorIntervalo;
+    public float colorChangeInterval;
     public GameObject fxExplosion;
 
-    private void Awake()
-    {
-         player = GameObject.FindWithTag("Player").GetComponent<PlayerLife>();
-    }
+    private float timer = 1.5f;
 
-    public void Update()
+    private void Update()
     {
-        Explo();
-    }
-
-    public void Explo()
-    {
-        if(detection() == true)
+        if (detection())
         {
-            timer -= Time.deltaTime;
-            StartCoroutine(CambiarColorRepetidamente());
-            if (timer <= 0)
-            {
-                player.life = player.life - GetComponent<Damage>().damage;
-                if (player.life <= 0)
-                {
-                    Destroy(gameObject);
-                    SceneManager.LoadScene(5);
-                }
-                Instantiate(fxExplosion, transform.position, transform.rotation);
-                Destroy(gameObject);
-            }
+            HandleExplosion();
         }
         else
         {
             StopAllCoroutines();
-            timer = 1.5f;
+            timer = Mathf.Max(0, timer + Time.deltaTime);
             spriteRenderer.material.SetColor("_Color", Color.red);
         }
     }
 
-    private IEnumerator CambiarColorRepetidamente()
+    private void HandleExplosion()
+    {
+        timer -= Time.deltaTime;
+        StartCoroutine(ChangeColorRepeatedly());
+
+        if (timer <= 0)
+        {
+            Instantiate(fxExplosion, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator ChangeColorRepeatedly()
     {
         while (true)
         {
             spriteRenderer.material.SetColor("_Color", Color.white);
-            yield return new WaitForSeconds(cambioDeColorIntervalo);
+            yield return new WaitForSeconds(colorChangeInterval);
 
             spriteRenderer.material.SetColor("_Color", Color.red);
-            yield return new WaitForSeconds(cambioDeColorIntervalo);
+            yield return new WaitForSeconds(colorChangeInterval);
         }
     }
 
     private bool detection()
     {
-        return Physics2D.OverlapCircle(transform.position, chekRaius, whatisPlayer);
+        return Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, chekRaius); 
+        Gizmos.DrawWireSphere(transform.position, checkRadius);
     }
+
 }

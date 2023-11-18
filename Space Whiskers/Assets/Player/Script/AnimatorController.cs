@@ -63,7 +63,6 @@ public class AnimatorController : MonoBehaviour
         {
             animador.SetBool("Caminando", false);
         }
-        animador.SetFloat("Velocidad", direccion.magnitude);
     }
 
     void ManejarDanio()

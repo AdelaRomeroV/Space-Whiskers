@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2265997350699650800}
   - component: {fileID: 5802274173283875408}
   - component: {fileID: 6987362986652483900}
-  - component: {fileID: -3529844800881698053}
   - component: {fileID: 6559099943721238212}
   - component: {fileID: 5744983528219005987}
   m_Layer: 0
@@ -131,7 +130,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 72
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -161,19 +160,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-3529844800881698053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3573957098040902408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f5caada84d4c1a468073aeca3a7ff1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 4
 --- !u!114 &6559099943721238212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,12 +172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c15c3663e7a3d0438c3bd84927689aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chekRaius: 8
-  whatisPlayer:
+  checkRadius: 7
+  whatIsPlayer:
     serializedVersion: 2
     m_Bits: 8
   spriteRenderer: {fileID: 2265997350699650800}
-  cambioDeColorIntervalo: 0.6
+  colorChangeInterval: 0.2
   fxExplosion: {fileID: 563870731589124087, guid: 96fea728103b78b45be5bc5474dcba72, type: 3}
 --- !u!114 &5744983528219005987
 MonoBehaviour:
@@ -205,5 +191,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
+  life: 4
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
