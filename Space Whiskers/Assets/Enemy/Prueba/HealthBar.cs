@@ -13,7 +13,6 @@ public class HealthBar : MonoBehaviour
 
     public Image[] energy;
     public Sprite fullEnergy;
-    public Sprite emptyEnergy;
 
     void Start()
     {
@@ -24,17 +23,19 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
-        if(vi.energy <= 0) { ene = 0; }
+        if (vi.energy <= 0) { ene = 0; }
         else if (vi.energy <= 15) { ene = 1; }
         else if (vi.energy <= 30) { ene = 2; }
 
-        for (int i = 0; i < energy.Length; i++)
+        for (int i = 0; i < numbofEnergy; i++)
         {
             if (i < ene) { energy[i].sprite = fullEnergy; }
-            else { energy[i].sprite = emptyEnergy; }
-
-            if (i < numbofEnergy) { energy[i].enabled = true; }
             else { energy[i].enabled = false; }
+        }
+
+        for (int i = numbofEnergy; i < energy.Length; i++)
+        {
+            energy[i].enabled = false;
         }
     }
 
