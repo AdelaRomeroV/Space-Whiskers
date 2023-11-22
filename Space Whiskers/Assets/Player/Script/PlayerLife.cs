@@ -72,9 +72,9 @@ public class PlayerLife : MonoBehaviour
 
             energy += collision.gameObject.GetComponent<Items>().enegyMax;
 
-            if (energy >= 30)
+            if (energy >= 60)
             {
-                energy = 30;
+                energy = 60;
             }
         }
 

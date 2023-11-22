@@ -12,7 +12,6 @@ public class HealthBar : MonoBehaviour
     public int numbofEnergy;
 
     public Image[] energy;
-    public Sprite fullEnergy;
 
     void Start()
     {
@@ -26,16 +25,12 @@ public class HealthBar : MonoBehaviour
         if (vi.energy <= 0) { ene = 0; }
         else if (vi.energy <= 15) { ene = 1; }
         else if (vi.energy <= 30) { ene = 2; }
+        else if (vi.energy <= 45) { ene = 3; }
+        else if (vi.energy <= 60) { ene = 4; }
 
         for (int i = 0; i < numbofEnergy; i++)
         {
-            if (i < ene) { energy[i].sprite = fullEnergy; }
-            else { energy[i].enabled = false; }
-        }
-
-        for (int i = numbofEnergy; i < energy.Length; i++)
-        {
-            energy[i].enabled = false;
+            energy[i].enabled = i < numbofEnergy && i < ene;
         }
     }
 

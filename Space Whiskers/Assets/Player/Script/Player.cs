@@ -39,11 +39,14 @@ public class Player : MonoBehaviour
 
     private PlayerLife vidaJugador;
 
+    private SpriteRenderer spriteRenderer;
+
     void Awake()
     {
         vidaJugador = GetComponent<PlayerLife>();
         rb2D = GetComponent<Rigidbody2D>();
         canDash = true;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void FixedUpdate()
     {
@@ -77,6 +80,7 @@ public class Player : MonoBehaviour
             ignoreCollisionTimer -= Time.deltaTime;
             if (ignoreCollisionTimer <= 0)
             {
+                spriteRenderer.color = Color.white;
                 Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BulletEnemy"), false);
             }
         }
@@ -95,6 +99,14 @@ public class Player : MonoBehaviour
         Vector3 displacement = weapon.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float playerInput = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
         weapon.rotation = Quaternion.Euler(0f, 0f, playerInput + offset);
+        if (displacement.x < 0)
+        {
+            weapon.GetComponent<SpriteRenderer>().flipY = false;
+        }
+        else
+        {
+            weapon.GetComponent<SpriteRenderer>().flipY = true;
+        }
     }
 
     void Shooting()
@@ -188,6 +200,7 @@ public class Player : MonoBehaviour
         canDash = false;
         isDah = true;
         Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BulletEnemy"), true);
+        spriteRenderer.color = Color.green;
         playerInput = new Vector2(playerInput.x * dashSpeed, playerInput.y * dashSpeed);
         yield return new WaitForSeconds(dashDuration);
         ignoreCollisionTimer = ignoreCollisionDuration;
