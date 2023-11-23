@@ -182,7 +182,7 @@ public class Player : MonoBehaviour
     {
         isUltiActive = true;
         yield return new WaitForSeconds(2);
-        life.energy -= 5;
+        life.energy -= 10;
         life.energy = Mathf.Clamp(life.energy, 0, int.MaxValue);
         isUltiActive = false;
         if (life.energy > 0)

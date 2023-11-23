@@ -48,7 +48,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: ground
+  - name: Ground
     uniqueID: 3988355869
     locked: 0
   - name: Player
@@ -65,4 +65,7 @@ TagManager:
     locked: 0
   - name: Canvas
     uniqueID: 666126111
+    locked: 0
+  - name: Pared
+    uniqueID: 2183636055
     locked: 0

@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 2445858916114088873}
   - component: {fileID: 4658038728106168787}
   - component: {fileID: 1180503394677742267}
-  - component: {fileID: 5928392116580969450}
   - component: {fileID: 5303615193615830881}
+  - component: {fileID: 3100449935116736446}
   m_Layer: 0
   m_Name: NPC's
   m_TagString: Untagged
@@ -217,8 +217,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!58 &5928392116580969450
-CircleCollider2D:
+--- !u!114 &5303615193615830881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895530893718086945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5ed43c992289945bd55ea9aa33eec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alertDialogo: {fileID: 5037106181238260111}
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  dialogueLine:
+  - aaaaaaaaaaaaa
+  - eeeeeeeeeee
+--- !u!61 &3100449935116736446
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -250,23 +268,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1.31
---- !u!114 &5303615193615830881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7895530893718086945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c5ed43c992289945bd55ea9aa33eec8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alertDialogo: {fileID: 5037106181238260111}
-  dialoguePanel: {fileID: 0}
-  dialogueText: {fileID: 0}
-  dialogueLine:
-  - aaaaaaaaaaaaa
-  - eeeeeeeeeee
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
