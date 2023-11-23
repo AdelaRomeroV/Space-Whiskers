@@ -51,9 +51,9 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
             life -= collision.gameObject.GetComponent<Damage>().damage;
+            Destroy(collision.gameObject);
             seQuitoVida = true;
             if (healthBar != null) { healthBar.UpdateHealthBar(); }
-            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Enemy"))

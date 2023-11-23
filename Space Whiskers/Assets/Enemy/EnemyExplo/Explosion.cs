@@ -12,7 +12,7 @@ public class Explosion : MonoBehaviour
     public float colorChangeInterval;
     public GameObject fxExplosion;
 
-    private float timer = 1.5f;
+    private float timer = 1f;
 
     private void Update()
     {
@@ -23,7 +23,7 @@ public class Explosion : MonoBehaviour
         else
         {
             StopAllCoroutines();
-            timer = Mathf.Max(0, timer + Time.deltaTime);
+            timer = 1f;
             spriteRenderer.material.SetColor("_Color", Color.red);
         }
     }
