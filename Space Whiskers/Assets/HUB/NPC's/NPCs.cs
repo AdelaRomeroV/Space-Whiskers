@@ -18,7 +18,7 @@ public class NPCs : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.Z))
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
             if (!didDialogueStart)
             {

@@ -51,6 +51,9 @@ TagManager:
   - name: Ground
     uniqueID: 3988355869
     locked: 0
+  - name: Area Enemy
+    uniqueID: 2507105423
+    locked: 0
   - name: Player
     uniqueID: 1660080187
     locked: 0
@@ -68,4 +71,7 @@ TagManager:
     locked: 0
   - name: Pared
     uniqueID: 2183636055
+    locked: 0
+  - name: npc
+    uniqueID: 1871341337
     locked: 0
