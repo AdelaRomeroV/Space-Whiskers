@@ -14,6 +14,13 @@ public class Explosion : MonoBehaviour
 
     private float timer = 1f;
 
+    public ContadorDeEnemigos enemigosMt;
+
+    private void Awake()
+    {
+        enemigosMt = GameObject.FindGameObjectWithTag("Player").GetComponent<ContadorDeEnemigos>();
+    }
+
     private void Update()
     {
         if (detection())
@@ -36,6 +43,7 @@ public class Explosion : MonoBehaviour
         if (timer <= 0)
         {
             Instantiate(fxExplosion, transform.position, transform.rotation);
+            enemigosMt.enemigosMuertos++;
             Destroy(gameObject);
         }
     }

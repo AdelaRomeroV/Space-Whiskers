@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(vidaJugador.life > 0)
+        if(vidaJugador.life > 0 && !vidaJugador.seCuro)
         {
             Mov();
             Rot();
@@ -200,15 +200,33 @@ public class Player : MonoBehaviour
         canDash = false;
         isDah = true;
         Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BulletEnemy"), true);
-        spriteRenderer.color = Color.green;
-        playerInput = new Vector2(playerInput.x * dashSpeed, playerInput.y * dashSpeed);
-        yield return new WaitForSeconds(dashDuration);
-        ignoreCollisionTimer = ignoreCollisionDuration;
-        isDah = false;
-        yield return new WaitForSeconds(dashCoolDown);
-        canDash = true;
+        spriteRenderer.color = Color.cyan;
+
+        Vector3 playerPosition = transform.position;
+
+        Vector3 targetPosition = playerPosition + new Vector3(playerInput.x * dashSpeed, playerInput.y * dashSpeed, 0f);
+
+        RaycastHit2D hit = Physics2D.Raycast(targetPosition, Vector2.down, 0.1f, LayerMask.GetMask("Suelo"));
+
+        if (hit.collider)
+        {
+            transform.position = targetPosition;
+
+            yield return new WaitForSeconds(dashDuration);
+            ignoreCollisionTimer = ignoreCollisionDuration;
+            isDah = false;
+            yield return new WaitForSeconds(dashCoolDown);
+            canDash = true;
+        }
+        else
+        {
+            spriteRenderer.color = Color.white;
+            isDah = false;
+            canDash = true;
+        }
     }
-   
+
+
     void activarDash()
     {
         if (isDah)

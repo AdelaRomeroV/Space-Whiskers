@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7560155429715556720}
   - component: {fileID: 8886005612864835774}
   - component: {fileID: -9221367115069229785}
+  - component: {fileID: 1664457517285077882}
   m_Layer: 6
   m_Name: EnemyAba
   m_TagString: Enemy
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1084671701
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.3018868, g: 0.05525096, b: 0.05525096, a: 1}
@@ -214,6 +215,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 8
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
+  enemigosMt: {fileID: 0}
+--- !u!114 &1664457517285077882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937545634461141620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5caada84d4c1a468073aeca3a7ff1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1340141008269091952
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +280,7 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
-  chekRaius: 12.81
+  chekRaius: 7.6
 --- !u!1 &3036183594158413507
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,8 +383,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1084671701
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -13,12 +13,16 @@ public class PlayerLife : MonoBehaviour
     public float timer;
     private Player player;
     public HealthBar healthBar;
+    public SpriteRenderer spriteRenderer;
     public bool seQuitoVida = false;
+
+    public bool seCuro = false;
 
 
     private void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         healthBar = GetComponentInChildren<HealthBar>();
     }
     private void Update()
@@ -33,8 +37,10 @@ public class PlayerLife : MonoBehaviour
     public void Regeneracion()
     {
 
-        if (energy >= 15 && Input.GetKey(KeyCode.Q) && life < 4)
+        if (energy >= 15 && Input.GetKey(KeyCode.Q) && life < 3)
         {
+            spriteRenderer.color = Color.green;
+            seCuro = true;
             if (timer < Time.time)
             {
                 energy -= 15;
@@ -42,6 +48,11 @@ public class PlayerLife : MonoBehaviour
                 timer = 1.5f + Time.time;
                 if (healthBar != null) { healthBar.UpdateHealthBar(); }
             }
+        }
+        else if (energy <= 0 || Input.GetKeyUp(KeyCode.Q) || (Input.GetKey(KeyCode.Q) && life <= 3))
+        {
+            spriteRenderer.color = Color.white;
+            seCuro = false;
         }
     }
 
