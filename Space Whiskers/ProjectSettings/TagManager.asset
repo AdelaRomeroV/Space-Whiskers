@@ -61,10 +61,10 @@ TagManager:
   - name: ArmaPlayer
     uniqueID: 1894168297
     locked: 0
-  - name: enemy
+  - name: Enemy
     uniqueID: 3210295595
     locked: 0
-  - name: bullet
+  - name: Bullet
     uniqueID: 3352378645
     locked: 0
   - name: Canvas
@@ -73,6 +73,9 @@ TagManager:
   - name: Pared
     uniqueID: 2183636055
     locked: 0
-  - name: npc
+  - name: Npc
     uniqueID: 1871341337
+    locked: 0
+  - name: Camara
+    uniqueID: 1552478897
     locked: 0
