@@ -12,7 +12,7 @@ public class Explosion : MonoBehaviour
     public float colorChangeInterval;
     public GameObject fxExplosion;
 
-    private float timer = 1f;
+    private float timer = 0.5f;
 
     public ContadorDeEnemigos enemigosMt;
 

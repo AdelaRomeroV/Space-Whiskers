@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class OndaExpansiva : MonoBehaviour
 {
-    public float velocidadCrecimiento = 2f;
-    public float duracionExplosion = 2f;
+    public float velocidadCrecimiento = 5f;
+    public float duracionExplosion = 1f;
 
     private float tiempoInicioExplosion;
 
