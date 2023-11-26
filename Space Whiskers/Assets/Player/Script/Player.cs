@@ -81,7 +81,6 @@ public class Player : MonoBehaviour
             if (ignoreCollisionTimer <= 0)
             {
                 spriteRenderer.color = Color.white;
-                Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BulletEnemy"), false);
             }
         }
     }
@@ -199,7 +198,6 @@ public class Player : MonoBehaviour
     {
         canDash = false;
         isDah = true;
-        Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("BulletEnemy"), true);
         spriteRenderer.color = Color.cyan;
 
         Vector3 playerPosition = transform.position;
