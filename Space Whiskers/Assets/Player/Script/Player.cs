@@ -81,6 +81,8 @@ public class Player : MonoBehaviour
             if (ignoreCollisionTimer <= 0)
             {
                 spriteRenderer.color = Color.white;
+                isDah = false;
+                canDash = true;
             }
         }
     }
@@ -198,7 +200,6 @@ public class Player : MonoBehaviour
     {
         canDash = false;
         isDah = true;
-        spriteRenderer.color = Color.cyan;
 
         Vector3 playerPosition = transform.position;
 
@@ -212,6 +213,7 @@ public class Player : MonoBehaviour
 
             yield return new WaitForSeconds(dashDuration);
             ignoreCollisionTimer = ignoreCollisionDuration;
+            spriteRenderer.color = Color.cyan;
             isDah = false;
             yield return new WaitForSeconds(dashCoolDown);
             canDash = true;

@@ -49,7 +49,7 @@ public class PlayerLife : MonoBehaviour
                 if (healthBar != null) { healthBar.UpdateHealthBar(); }
             }
         }
-        else if (energy <= 0 || Input.GetKeyUp(KeyCode.Q) || (Input.GetKey(KeyCode.Q) && life <= 3))
+        else if (Input.GetKeyUp(KeyCode.Q) || (Input.GetKey(KeyCode.Q) && life <= 3))
         {
             spriteRenderer.color = Color.white;
             seCuro = false;
