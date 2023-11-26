@@ -26,7 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: 6245cd7d6920c7c4682424d785f745f7
-  - enabled: 1
-    path: Assets/Scenes/Opciones.unity
-    guid: 3961eeb4cdf6a7f448ff8f9e408028db
   m_configObjects: {}
