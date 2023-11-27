@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 775338c2063f849458b4008114d61a86
   - enabled: 1
+    path: Assets/Scenes/Intro_Leven.unity
+    guid: 4bd8e4e114d4c8e4098418e7cd3e9345
+  - enabled: 1
     path: Assets/Scenes/Leven_01.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
