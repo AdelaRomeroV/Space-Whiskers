@@ -213,7 +213,7 @@ public class Player : MonoBehaviour
 
             yield return new WaitForSeconds(dashDuration);
             ignoreCollisionTimer = ignoreCollisionDuration;
-            spriteRenderer.color = Color.cyan;
+            spriteRenderer.color = Color.blue;
             isDah = false;
             yield return new WaitForSeconds(dashCoolDown);
             canDash = true;
