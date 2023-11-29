@@ -395,3 +395,8 @@ MonoBehaviour:
   BulletEnemy: {fileID: 4383393682009695133, guid: 18c9ae139a584b8459b2805f147e895d, type: 3}
   cooldown: 0.2
   cooldownTime: 0.1
+  variantesAnimador:
+  - {fileID: 9100000, guid: 04f66dfe8f756b24cb104434b092e926, type: 2}
+  - {fileID: 9100000, guid: ff515c6b8514e714ba8821b2ac2d6a8f, type: 2}
+  - {fileID: 9100000, guid: fe093d77e9236ec4f84a2f2726770222, type: 2}
+  animator: {fileID: 1509608507380738732}

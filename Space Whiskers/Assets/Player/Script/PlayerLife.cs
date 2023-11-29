@@ -61,7 +61,7 @@ public class PlayerLife : MonoBehaviour
         
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
-            life -= collision.gameObject.GetComponent<Damage>().damage;
+            if (collision.gameObject.GetComponent<Damage>() != null) { life -= collision.gameObject.GetComponent<Damage>().damage; }
             Destroy(collision.gameObject);
             seQuitoVida = true;
             if (healthBar != null) { healthBar.UpdateHealthBar(); }
@@ -69,7 +69,7 @@ public class PlayerLife : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            life -= collision.gameObject.GetComponent<Damage>().damage;
+            if (collision.gameObject.GetComponent<Damage>() != null) { life -= collision.gameObject.GetComponent<Damage>().damage; }
             seQuitoVida = true;
             if (healthBar != null) { healthBar.UpdateHealthBar(); }
         }
@@ -103,7 +103,7 @@ public class PlayerLife : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            life -= collision.gameObject.GetComponent<Damage>().damage;
+            if (collision.gameObject.GetComponent<Damage>() != null) { life -= collision.gameObject.GetComponent<Damage>().damage; }
             seQuitoVida = true;
             if (healthBar != null) { healthBar.UpdateHealthBar(); }
         }

@@ -16,10 +16,19 @@ public class EnemyDis : MonoBehaviour
     public float cooldown = 0f;
     public float cooldownTime = 0f;
 
+    public RuntimeAnimatorController[] variantesAnimador;
+    public Animator animator;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         timeBtwShots = startTimeBtwShots;
+    }
+    private void Start()
+    {
+        int indiceVariante = Random.Range(0, variantesAnimador.Length);
+
+        animator.runtimeAnimatorController = variantesAnimador[indiceVariante];
     }
 
     void Update()
