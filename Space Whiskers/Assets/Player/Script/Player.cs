@@ -237,9 +237,13 @@ public class Player : MonoBehaviour
         {
             transform.position = targetPosition;
 
-            yield return new WaitForSeconds(dashDuration);
-            ignoreCollisionTimer = ignoreCollisionDuration;
-            spriteRenderer.color = Color.blue;
+            if (transform.position != playerPosition)
+            {
+                yield return new WaitForSeconds(dashDuration);
+                ignoreCollisionTimer = ignoreCollisionDuration;
+                spriteRenderer.color = Color.blue;
+            }
+
             isDah = false;
             yield return new WaitForSeconds(dashCoolDown);
             canDash = true;
