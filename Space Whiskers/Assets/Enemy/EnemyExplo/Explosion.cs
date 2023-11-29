@@ -47,9 +47,9 @@ public class Explosion : MonoBehaviour
 
         if (timer <= 0 && explotando == false)
         {
+            animador.SetBool("Explota", true);
             explotando = true;
             miCollider.isTrigger = true;
-            animador.SetBool("Explota", true);
             transform.localScale = new Vector3(2f, 2f, 2f);
             Instantiate(fxExplosion, transform.position, transform.rotation);
             enemigosMt.enemigosMuertos++;

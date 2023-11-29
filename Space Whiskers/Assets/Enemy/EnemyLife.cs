@@ -8,24 +8,50 @@ public class EnemyLife : MonoBehaviour
     public GameObject prefab;
     public ContadorDeEnemigos enemigosMt;
 
+    private SpriteRenderer spriteRenderer;
+
+    private Animator animador;
+    private bool muerto = false;
+
     private void Awake()
     {
         enemigosMt = GameObject.FindGameObjectWithTag("Player").GetComponent<ContadorDeEnemigos>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animador = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-        {
-            life -= collision.gameObject.GetComponent<DamagePlayer>().damageplayer;
-            Destroy(collision.gameObject);
-
-            if (life <= 0)
+        {          
+            if (life <= 0 && !muerto)
             {
                 if (prefab != null) { Instantiate(prefab, transform.position, Quaternion.identity); }
-                Destroy(gameObject);
+                animador.SetTrigger("Muerto");
+                muerto = true;
                 enemigosMt.enemigosMuertos++;
             }
+            else if (life >= 1) 
+            {
+                life -= collision.gameObject.GetComponent<DamagePlayer>().damageplayer;
+                animador.SetTrigger("RecibeDaño");
+                StartCoroutine(CambiarColorTemporalmente(0.1f));
+                Destroy(collision.gameObject);
+            }
         }
+    }
+
+    private IEnumerator CambiarColorTemporalmente(float duracion)
+    {
+        spriteRenderer.color = Color.red;
+
+        yield return new WaitForSeconds(duracion);
+
+        spriteRenderer.color = Color.white;
+    }
+
+    public void Muerto()
+    {
+        Destroy(gameObject);
     }
 }

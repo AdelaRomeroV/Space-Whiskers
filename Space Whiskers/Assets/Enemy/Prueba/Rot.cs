@@ -27,6 +27,14 @@ public class Rot : MonoBehaviour
         Vector3 displacement = player.transform.position - weapon.position;
         float playerInput = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
         weapon.rotation = Quaternion.Euler(0f, 0f, playerInput + offet);
+        if (displacement.x < 0)
+        {
+            weapon.localScale = new Vector3(-0.2f, 0.2f, 0.2f);
+        }
+        else
+        {
+            weapon.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        }
     }
     private bool detection()
     {

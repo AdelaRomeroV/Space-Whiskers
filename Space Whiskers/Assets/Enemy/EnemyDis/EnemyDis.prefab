@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.176, y: 1.8186, z: 0}
-  m_LocalScale: {x: 2.147, y: 2.147, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8712531069025444374}
@@ -109,10 +109,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1084671701
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.6886792, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -1396305228, guid: a924fdae6d7504646957302541569182, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -156,7 +156,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
 --- !u!50 &6062915099570290092
 Rigidbody2D:
   serializedVersion: 4
@@ -216,6 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 10
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
+  enemigosMt: {fileID: 0}
 --- !u!114 &5220362997709895642
 MonoBehaviour:
   m_ObjectHideFlags: 0
