@@ -1,5 +1,7 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -40,6 +42,7 @@ public class Player : MonoBehaviour
     private PlayerLife vidaJugador;
 
     private SpriteRenderer spriteRenderer;
+    public TextMeshProUGUI textoHUD;
 
     void Awake()
     {
@@ -47,6 +50,7 @@ public class Player : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         canDash = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        textoHUD = GameObject.Find("Municion").GetComponent<TextMeshProUGUI>();
     }
     private void FixedUpdate()
     {
@@ -65,6 +69,24 @@ public class Player : MonoBehaviour
             activarDash();
             UltiShooting();
             Timer();
+            Hud();
+        }
+    }
+
+    void Hud()
+    {
+        switch(bulletType) 
+        {
+            case 0:
+                textoHUD.text = "Basic: " + "0 / 0";
+                break;
+            case 1:
+                PlayerLife life = GetComponent<PlayerLife>();
+                textoHUD.text = "Ulti: " + life.energy.ToString();
+                break;
+            case 2:
+                textoHUD.text = "Metralleta " + balas.ToString();
+                break;
         }
     }
 
