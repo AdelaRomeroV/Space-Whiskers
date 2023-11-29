@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6987362986652483900}
   - component: {fileID: 6559099943721238212}
   - component: {fileID: 5744983528219005987}
+  - component: {fileID: 919799069536430221}
+  - component: {fileID: 8032325715770854555}
   m_Layer: 0
   m_Name: EnemyExplosion
   m_TagString: Enemy
@@ -31,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.9865, y: -61.7774, z: 0}
-  m_LocalScale: {x: 1.8885967, y: 1.6902806, z: 2.0899224}
+  m_LocalScale: {x: 1, y: 1, z: 2.0899224}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,10 +77,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1084671701
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8067417, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: -1187704898, guid: f8879414efc54fe42b0e639252d29eb7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,7 +98,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3573957098040902408}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -147,18 +149,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.018886566, y: -0.34386712}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.0869565, y: 2.0869565}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6421461, y: 1.0581793}
   m_EdgeRadius: 0
 --- !u!114 &6559099943721238212
 MonoBehaviour:
@@ -172,13 +174,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c15c3663e7a3d0438c3bd84927689aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkRadius: 7
+  checkRadius: 3
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 8
-  spriteRenderer: {fileID: 2265997350699650800}
-  colorChangeInterval: 0.2
   fxExplosion: {fileID: 563870731589124087, guid: 96fea728103b78b45be5bc5474dcba72, type: 3}
+  enemigosMt: {fileID: 0}
+  explotando: 0
 --- !u!114 &5744983528219005987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,3 +195,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 4
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
+  enemigosMt: {fileID: 0}
+--- !u!95 &919799069536430221
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573957098040902408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40e2452763d832a4abef09921e8117ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8032325715770854555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573957098040902408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5caada84d4c1a468073aeca3a7ff1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0

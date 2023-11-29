@@ -7,17 +7,23 @@ public class Explosion : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsPlayer;
 
-    [Header("Pre Animacion")]
-    public SpriteRenderer spriteRenderer;
-    public float colorChangeInterval;
+    [Header("Animacion")]
+    private Animator animador;
     public GameObject fxExplosion;
+
 
     private float timer = 0.5f;
 
     public ContadorDeEnemigos enemigosMt;
 
+    public bool explotando = false;
+
+    Collider2D miCollider;
+
     private void Awake()
     {
+        miCollider = GetComponent<Collider2D>();
+        animador = GetComponent<Animator>();
         enemigosMt = GameObject.FindGameObjectWithTag("Player").GetComponent<ContadorDeEnemigos>();
     }
 
@@ -29,34 +35,24 @@ public class Explosion : MonoBehaviour
         }
         else
         {
-            StopAllCoroutines();
             timer = 1f;
-            spriteRenderer.material.SetColor("_Color", Color.red);
+            animador.SetBool("IsActivar", false);
         }
     }
 
     private void HandleExplosion()
     {
         timer -= Time.deltaTime;
-        StartCoroutine(ChangeColorRepeatedly());
+        animador.SetBool("IsActivar", true);
 
-        if (timer <= 0)
+        if (timer <= 0 && explotando == false)
         {
+            explotando = true;
+            miCollider.isTrigger = true;
+            animador.SetBool("Explota", true);
+            transform.localScale = new Vector3(2f, 2f, 2f);
             Instantiate(fxExplosion, transform.position, transform.rotation);
             enemigosMt.enemigosMuertos++;
-            Destroy(gameObject);
-        }
-    }
-
-    private IEnumerator ChangeColorRepeatedly()
-    {
-        while (true)
-        {
-            spriteRenderer.material.SetColor("_Color", Color.white);
-            yield return new WaitForSeconds(colorChangeInterval);
-
-            spriteRenderer.material.SetColor("_Color", Color.red);
-            yield return new WaitForSeconds(colorChangeInterval);
         }
     }
 
@@ -69,6 +65,10 @@ public class Explosion : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, checkRadius);
+    }
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 
 }
