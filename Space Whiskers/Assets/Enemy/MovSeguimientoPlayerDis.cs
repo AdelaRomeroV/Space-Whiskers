@@ -36,20 +36,29 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
             if (Vector2.Distance(transform.position, Player.position) > stoppingDistancia)
             {
                 transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
-                animador.SetBool("IsCaminar", true);
-                Flip();
+                if(animador!= null)
+                {
+                    animador.SetBool("IsCaminar", true);
+                    Flip();
+                }
             }
 
             else if (Vector2.Distance(transform.position, Player.position) < stoppingDistancia && Vector2.Distance(transform.position, Player.position) > retreatDistancie)
             {
                 transform.position = this.transform.position;
-                animador.SetBool("IsCaminar", false);
+                if (animador != null)
+                {
+                    animador.SetBool("IsCaminar", false);
+                }
             }
 
             else if (Vector2.Distance(transform.position, Player.position) < retreatDistancie)
             {
-                animador.SetBool("IsCaminar", true);
-                Flip();
+                if (animador != null)
+                {
+                    animador.SetBool("IsCaminar", true);
+                    Flip();
+                }
                 transform.position = Vector2.MoveTowards(transform.position, Player.position, -speed * Time.deltaTime); ;
             }
         }

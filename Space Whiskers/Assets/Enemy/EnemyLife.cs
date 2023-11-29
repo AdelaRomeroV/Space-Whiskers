@@ -27,14 +27,15 @@ public class EnemyLife : MonoBehaviour
             if (life <= 0 && !muerto)
             {
                 if (prefab != null) { Instantiate(prefab, transform.position, Quaternion.identity); }
-                animador.SetTrigger("Muerto");
+                if (animador != null) { animador.SetTrigger("Muerto"); }
+                else { Muerto(); }
                 muerto = true;
                 enemigosMt.enemigosMuertos++;
             }
             else if (life >= 1) 
             {
                 life -= collision.gameObject.GetComponent<DamagePlayer>().damageplayer;
-                animador.SetTrigger("RecibeDaño");
+                if (animador != null) { animador.SetTrigger("RecibeDaño"); }
                 StartCoroutine(CambiarColorTemporalmente(0.1f));
                 Destroy(collision.gameObject);
             }
