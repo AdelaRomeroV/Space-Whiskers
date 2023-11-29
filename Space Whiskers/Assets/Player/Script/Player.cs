@@ -50,7 +50,8 @@ public class Player : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         canDash = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        textoHUD = GameObject.Find("Municion").GetComponent<TextMeshProUGUI>();
+        GameObject textoHUDObject = GameObject.Find("Municion");
+        if (textoHUDObject != null) { textoHUD = textoHUDObject.GetComponent<TextMeshProUGUI>(); }
     }
     private void FixedUpdate()
     {
@@ -75,18 +76,21 @@ public class Player : MonoBehaviour
 
     void Hud()
     {
-        switch(bulletType) 
+        if (textoHUD != null)
         {
-            case 0:
-                textoHUD.text = "Basic: " + "0 / 0";
-                break;
-            case 1:
-                PlayerLife life = GetComponent<PlayerLife>();
-                textoHUD.text = "Ulti: " + life.energy.ToString();
-                break;
-            case 2:
-                textoHUD.text = "Metralleta " + balas.ToString();
-                break;
+            switch (bulletType)
+            {
+                case 0:
+                    textoHUD.text = "Basic: " + "0 / 0";
+                    break;
+                case 1:
+                    PlayerLife life = GetComponent<PlayerLife>();
+                    textoHUD.text = "Ulti: " + life.energy.ToString();
+                    break;
+                case 2:
+                    textoHUD.text = "Metralleta " + balas.ToString();
+                    break;
+            }
         }
     }
 
