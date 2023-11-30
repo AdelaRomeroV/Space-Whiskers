@@ -11,6 +11,7 @@ public class EnemyLife : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private Animator animador;
+    private Explosion d;
     private bool muerto = false;
 
     private void Awake()
@@ -18,6 +19,7 @@ public class EnemyLife : MonoBehaviour
         enemigosMt = GameObject.FindGameObjectWithTag("Player").GetComponent<ContadorDeEnemigos>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animador = GetComponent<Animator>();
+        d = GetComponent<Explosion>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,15 +29,15 @@ public class EnemyLife : MonoBehaviour
             if (life <= 0 && !muerto)
             {
                 if (prefab != null) { Instantiate(prefab, transform.position, Quaternion.identity); }
-                if (animador != null) { animador.SetTrigger("Muerto"); }
-                else { Muerto(); }
+                if (animador != null && d == null) { animador.SetTrigger("Muerto"); }
+                else if (d != null || animador == null) { Muerto(); }
                 muerto = true;
                 enemigosMt.enemigosMuertos++;
             }
             else if (life >= 1) 
             {
                 life -= collision.gameObject.GetComponent<DamagePlayer>().damageplayer;
-                if (animador != null) { animador.SetTrigger("RecibeDaño"); }
+                if (animador != null && d == null) { animador.SetTrigger("RecibeDaño"); }
                 StartCoroutine(CambiarColorTemporalmente(0.1f));
                 Destroy(collision.gameObject);
             }

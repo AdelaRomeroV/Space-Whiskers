@@ -36,7 +36,7 @@ public class PlayerLife : MonoBehaviour
     public void Regeneracion()
     {
         Player jugador = GetComponent<Player>();
-        if (energy >= 15 && energy < 60 && Input.GetKey(KeyCode.Q) && life < 4 && jugador.bulletType != 1)
+        if (energy >= 15 && Input.GetKey(KeyCode.Q) && life < 4 && jugador.bulletType != 1)
         {
             spriteRenderer.color = Color.green;
             seCuro = true;
