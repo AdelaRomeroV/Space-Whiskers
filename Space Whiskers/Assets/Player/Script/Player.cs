@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     public GameObject[] bullet;
     public float timerShots;
     private float nextShoop;
-    private int bulletType;
+    public int bulletType;
     public float segundos;
     private bool isUltiActive = false;
 
@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
     {
         if(vidaJugador.life > 0 && !vidaJugador.seCuro)
         {
+            movSpeed = 10;
             Mov();
             Rot();
             ChangeWeaponSprite();
@@ -71,6 +72,10 @@ public class Player : MonoBehaviour
             UltiShooting();
             Timer();
             Hud();
+        }
+        else
+        {
+            movSpeed = 0;
         }
     }
 
@@ -194,7 +199,7 @@ public class Player : MonoBehaviour
     void UltiShooting()
     {
         PlayerLife life = GetComponent<PlayerLife>();
-        if (!metra && life.energy >= 30 && Input.GetKeyDown(KeyCode.Q))
+        if (!metra && life.energy >= 60 && Input.GetKeyUp(KeyCode.Q))
         {
             bulletType = 1;
             StartCoroutine(State(life));

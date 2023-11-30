@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Threading;
+using Unity.VisualScripting;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class PlayerLife : MonoBehaviour
     public float energy;
     public float timer;
     private Player player;
-    public HealthBar healthBar;
     public SpriteRenderer spriteRenderer;
     public bool seQuitoVida = false;
 
@@ -23,7 +23,6 @@ public class PlayerLife : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        healthBar = GetComponentInChildren<HealthBar>();
     }
     private void Update()
     {
@@ -36,20 +35,22 @@ public class PlayerLife : MonoBehaviour
     }
     public void Regeneracion()
     {
-
-        if (energy >= 15 && Input.GetKey(KeyCode.Q) && life < 3)
+        Player jugador = GetComponent<Player>();
+        if (energy >= 15 && energy < 60 && Input.GetKey(KeyCode.Q) && life < 4 && jugador.bulletType != 1)
         {
             spriteRenderer.color = Color.green;
             seCuro = true;
-            if (timer < Time.time)
+            timer -= Time.deltaTime;
+            if (timer < 0)
             {
                 energy -= 15;
                 life += 1f;
-                timer = 1.5f + Time.time;
-                if (healthBar != null) { healthBar.UpdateHealthBar(); }
+                timer = 1.5f;
+                spriteRenderer.color = Color.white;
+                seCuro = false;
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Q) || (Input.GetKey(KeyCode.Q) && life <= 3))
+        else if (Input.GetKeyUp(KeyCode.Q) || (Input.GetKey(KeyCode.Q) && life <= 4))
         {
             spriteRenderer.color = Color.white;
             seCuro = false;
@@ -64,14 +65,12 @@ public class PlayerLife : MonoBehaviour
             if (collision.gameObject.GetComponent<Damage>() != null) { life -= collision.gameObject.GetComponent<Damage>().damage; }
             Destroy(collision.gameObject);
             seQuitoVida = true;
-            if (healthBar != null) { healthBar.UpdateHealthBar(); }
         }
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
             if (collision.gameObject.GetComponent<Damage>() != null) { life -= collision.gameObject.GetComponent<Damage>().damage; }
             seQuitoVida = true;
-            if (healthBar != null) { healthBar.UpdateHealthBar(); }
         }
     }
 
@@ -93,7 +92,6 @@ public class PlayerLife : MonoBehaviour
         {
             Destroy(collision.gameObject);
             life += collision.gameObject.GetComponent<Items>().lifeMax;
-            if (healthBar != null) { healthBar.UpdateHealthBar(); }
 
             if (life >= 5)
             {
@@ -105,7 +103,6 @@ public class PlayerLife : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<Damage>() != null) { life -= collision.gameObject.GetComponent<Damage>().damage; }
             seQuitoVida = true;
-            if (healthBar != null) { healthBar.UpdateHealthBar(); }
         }
     }
 

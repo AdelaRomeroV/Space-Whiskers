@@ -18,43 +18,41 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         vi = GetComponentInChildren<PlayerLife>();
-        vi.life = maxHealth;
-        UpdateHealthBar();
+        maxHealth = vi.energy;
     }
 
     private void Update()
     {
-        if (vi.energy <= 0) 
-        {
-            ene = 0;
-            fullUlti.gameObject.SetActive(false);
-        }
-        else if (vi.energy <= 15) { ene = 1; }
-        else if (vi.energy <= 30) { ene = 2; }
-        else if (vi.energy <= 45) { ene = 3; }
-        else if (vi.energy <= 60) { ene = 4; }
-
-        UpdateUlti();
+        if (vi.life <= 0) { ene = 0; }
+        else if (vi.life <= 1) { ene = 1; }
+        else if (vi.life <= 2) { ene = 2; }
+        else if (vi.life <= 3) { ene = 3; }
+        else if (vi.life <= 4) { ene = 4; }
 
         for (int i = 0; i < numbofEnergy; i++)
         {
             energy[i].enabled = i < numbofEnergy && i < ene;
         }
+        UpdateHealthBar();
+        UpdateUlti();
     }
 
     public void UpdateHealthBar()
     {
-        float fillAmount = vi.life / maxHealth;
+        float fillAmount = vi.energy / maxHealth;
         healthBarImage.fillAmount = fillAmount;
     }
     public void UpdateUlti()
     {
-        Player jugador = GetComponent<Player>(); 
+        Player jugador = GetComponent<Player>();
         PlayerLife life = GetComponent<PlayerLife>();
-
-        if (!jugador.metra && life.energy >= 30 && Input.GetKeyDown(KeyCode.Q))
+        if (!jugador.metra && life.energy >= 60 && Input.GetKeyUp(KeyCode.Q) && !life.seCuro)
         {
             fullUlti.gameObject.SetActive(true);
+        }
+        else if (vi.energy <= 0)
+        {
+            fullUlti.gameObject.SetActive(false);
         }
     }
 }
