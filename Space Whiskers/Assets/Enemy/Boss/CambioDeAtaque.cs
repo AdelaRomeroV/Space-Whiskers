@@ -16,7 +16,7 @@ public class CambioDeAtaque : MonoBehaviour
     }
     public IEnumerator Ataques()
     {
-        numeroDeAtaque = 2;
+        numeroDeAtaque = Random.Range(0, parametros.Length);
         switch (numeroDeAtaque)
         { 
             case 0:
