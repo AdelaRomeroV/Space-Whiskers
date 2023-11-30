@@ -18,6 +18,7 @@ public class EnemyDis : MonoBehaviour
 
     public RuntimeAnimatorController[] variantesAnimador;
     public Animator animator;
+    public int var;
 
     void Awake()
     {
@@ -26,9 +27,7 @@ public class EnemyDis : MonoBehaviour
     }
     private void Start()
     {
-        int indiceVariante = Random.Range(0, variantesAnimador.Length);
-
-        animator.runtimeAnimatorController = variantesAnimador[indiceVariante];
+        animator.runtimeAnimatorController = variantesAnimador[var];
     }
 
     void Update()

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class HealthBar : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class HealthBar : MonoBehaviour
     public int numbofEnergy;
 
     public Image[] energy;
+    public Image fullUlti;
 
     void Start()
     {
@@ -22,11 +24,17 @@ public class HealthBar : MonoBehaviour
 
     private void Update()
     {
-        if (vi.energy <= 0) { ene = 0; }
+        if (vi.energy <= 0) 
+        {
+            ene = 0;
+            fullUlti.gameObject.SetActive(false);
+        }
         else if (vi.energy <= 15) { ene = 1; }
         else if (vi.energy <= 30) { ene = 2; }
         else if (vi.energy <= 45) { ene = 3; }
         else if (vi.energy <= 60) { ene = 4; }
+
+        UpdateUlti();
 
         for (int i = 0; i < numbofEnergy; i++)
         {
@@ -38,6 +46,16 @@ public class HealthBar : MonoBehaviour
     {
         float fillAmount = vi.life / maxHealth;
         healthBarImage.fillAmount = fillAmount;
+    }
+    public void UpdateUlti()
+    {
+        Player jugador = GetComponent<Player>(); 
+        PlayerLife life = GetComponent<PlayerLife>();
+
+        if (!jugador.metra && life.energy >= 30 && Input.GetKeyDown(KeyCode.Q))
+        {
+            fullUlti.gameObject.SetActive(true);
+        }
     }
 }
 

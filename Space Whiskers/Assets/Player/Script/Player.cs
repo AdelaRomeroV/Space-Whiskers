@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     private float dispersionMax = 20f;
     private int balas = 30;
     private float recuperacion = 10f;
-    private bool metra = false;
+    [SerializeField] public bool metra = false;
 
     private PlayerLife vidaJugador;
 

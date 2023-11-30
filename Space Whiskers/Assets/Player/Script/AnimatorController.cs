@@ -69,7 +69,7 @@ public class AnimatorController : MonoBehaviour
     {
         if (vidaJugador.seQuitoVida == true && vidaJugador.life > 0)
         {
-            animador.SetTrigger("RecibirDanio");
+            animador.SetTrigger("RecibeDaño");
             StartCoroutine(CambiarColorTemporalmente(Color.red, 0.1f));
         }
     }
