@@ -112,8 +112,6 @@ public class Player : MonoBehaviour
             if (ignoreCollisionTimer <= 0)
             {
                 spriteRenderer.color = Color.white;
-                isDah = false;
-                canDash = true;
             }
         }
     }
@@ -248,9 +246,8 @@ public class Player : MonoBehaviour
                 ignoreCollisionTimer = ignoreCollisionDuration;
                 spriteRenderer.color = Color.blue;
             }
-
-            isDah = false;
             yield return new WaitForSeconds(dashCoolDown);
+            isDah = false;
             canDash = true;
         }
         else
