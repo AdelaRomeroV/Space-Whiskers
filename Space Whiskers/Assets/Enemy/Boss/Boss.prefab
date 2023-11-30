@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2967459725286048709}
   - component: {fileID: 7765620838488254757}
   - component: {fileID: 4858253162550473445}
+  - component: {fileID: 4198656238023369589}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,8 +176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parametros:
   - {fileID: 11400000, guid: e49867c583db47844a7b62dc54e53d76, type: 2}
-  - {fileID: 11400000, guid: 423e868543fea424f9a7e1e5e19fe605, type: 2}
+  - {fileID: 11400000, guid: be33d6cf4c288ab4588ff082ccaa3351, type: 2}
   - {fileID: 11400000, guid: 861db630a2a2eb94a851fbb8a38fca85, type: 2}
+  - {fileID: 11400000, guid: fd4c198eb6135a1439e8301d43191d0e, type: 2}
   metodos: {fileID: 8885337646362396033}
   numeroDeAtaque: 0
 --- !u!114 &4858253162550473445
@@ -191,7 +193,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10
+  life: 200
+  prefab: {fileID: 0}
+  enemigosMt: {fileID: 0}
+--- !u!114 &4198656238023369589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480311020277278983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5883a9ba0047f08459580e1a451d9146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personaje: {fileID: 0}
+  velocidad: 5
+  distanciaUmbral: 0.1
 --- !u!1 &3994991635151837369
 GameObject:
   m_ObjectHideFlags: 0
