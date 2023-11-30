@@ -593,6 +593,8 @@ MonoBehaviour:
   - {fileID: 6269248221625909975, guid: fe3b7a9264a5bbf45a368a1b4fa9bef2, type: 3}
   timerShots: 0.3
   segundos: 2
+  metra: 0
+  textoHUD: {fileID: 0}
 --- !u!114 &790177953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,7 +1294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 480311020277278983, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1302935037142369550, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1317,6 +1319,10 @@ PrefabInstance:
     - target: {fileID: 4858253162550473445, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: life
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858253162550473445, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
+      propertyPath: prefab
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7238679298047771023, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: m_LocalScale.x

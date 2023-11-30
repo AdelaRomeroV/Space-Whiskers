@@ -111,6 +111,6 @@ public class PlayerLife : MonoBehaviour
 
     public void ManejorDeMuerte()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
     }
 }

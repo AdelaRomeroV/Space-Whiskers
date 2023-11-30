@@ -11,7 +11,7 @@ public class BulletUp : MonoBehaviour
     void Awake()
     {
         GetComponent<Rigidbody2D>().velocity = transform.up * speed;
-        Destroy(gameObject, 5f);
+        //Destroy(gameObject, 5f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
