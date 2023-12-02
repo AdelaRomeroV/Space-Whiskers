@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuBoton : MonoBehaviour
 {
-    public void NextScena(int scene)
+    public void NextScena(string scene)
     {
         SceneManager.LoadScene(scene); 
     }
