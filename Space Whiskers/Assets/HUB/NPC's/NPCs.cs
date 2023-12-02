@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+[System.Serializable]
+public struct Dialogue
+{
+    public Sprite sprite;
+    [TextArea(4, 6)] public string line;
+}
 public class NPCs : MonoBehaviour
 {
     private bool isPlayerInRange;
@@ -14,7 +20,7 @@ public class NPCs : MonoBehaviour
     [SerializeField] private GameObject alertDialogo;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
-    [SerializeField, TextArea(4, 6)] private string[] dialogueLine;
+    [SerializeField] private Dialogue[] dialogueLine;
 
     void Update()
     {
@@ -25,7 +31,7 @@ public class NPCs : MonoBehaviour
                 StartDialogue();
             }
 
-            else if (dialogueText.text == dialogueLine[lineaIndex])
+            else if (dialogueText.text == dialogueLine[lineaIndex].line)
             {
                 NexDialogueLine();
             }
@@ -33,7 +39,7 @@ public class NPCs : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                dialogueText.text = dialogueLine[lineaIndex];
+                dialogueText.text = dialogueLine[lineaIndex].line;
             }
         }
     }
@@ -68,7 +74,7 @@ public class NPCs : MonoBehaviour
     private IEnumerator ShowLine()
     {
         dialogueText.text = string.Empty;
-        foreach (char ch in dialogueLine[lineaIndex])
+        foreach (char ch in dialogueLine[lineaIndex].line)
         {
             dialogueText.text += ch;
             yield return new WaitForSecondsRealtime(typingTime);

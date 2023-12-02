@@ -75,4 +75,10 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+    }
 }
