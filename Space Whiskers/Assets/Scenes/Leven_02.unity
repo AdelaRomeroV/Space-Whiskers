@@ -560,7 +560,6 @@ MonoBehaviour:
   life: 3
   energy: 60
   timer: 1.5
-  healthBar: {fileID: 0}
   spriteRenderer: {fileID: 0}
   seQuitoVida: 0
   seCuro: 0
@@ -592,6 +591,7 @@ MonoBehaviour:
   - {fileID: 4908892834670271972, guid: e0b5bee3ae9b5764ca39497bad314e7d, type: 3}
   - {fileID: 6269248221625909975, guid: fe3b7a9264a5bbf45a368a1b4fa9bef2, type: 3}
   timerShots: 0.3
+  bulletType: 0
   segundos: 2
   metra: 0
   textoHUD: {fileID: 0}
