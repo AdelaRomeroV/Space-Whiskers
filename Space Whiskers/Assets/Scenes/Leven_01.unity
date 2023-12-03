@@ -51134,7 +51134,7 @@ Transform:
   m_GameObject: {fileID: 459489556}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.95005, y: -1.6630592, z: -10.019493}
+  m_LocalPosition: {x: 9.949989, y: -1.6630592, z: -10.019493}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51228,7 +51228,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 85.25005, y: -59.46306, z: -10.019493}
+  m_LocalPosition: {x: 85.24999, y: -59.46306, z: -10.019493}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52337,7 +52337,7 @@ Transform:
   m_GameObject: {fileID: 1411059478}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63.255554, y: 6.72316, z: -10.683403}
+  m_LocalPosition: {x: -63.255653, y: 6.72316, z: -10.683403}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -53637,7 +53637,7 @@ RectTransform:
   m_GameObject: {fileID: 5187890290418275373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5745670102677315199}
@@ -53649,7 +53649,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -355.49994, y: 259.5}
+  m_AnchoredPosition: {x: -447.01904, y: 319.21222}
   m_SizeDelta: {x: -1001, y: -523}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5466684927221285067
@@ -53904,7 +53904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1138.5, y: -685.5}
+  m_AnchoredPosition: {x: 1609.2711, y: -983.44385}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8437840725729196490
