@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class CambioDeEscena : MonoBehaviour
 {
-    public int escenaN;
+    public string escena;
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             int nivelActual = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(escenaN);
+            SceneManager.LoadScene(escena);
         }
     }
 }

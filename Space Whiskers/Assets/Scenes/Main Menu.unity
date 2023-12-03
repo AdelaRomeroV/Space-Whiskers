@@ -410,13 +410,13 @@ MonoBehaviour:
       - m_Target: {fileID: 273375612}
         m_TargetAssemblyTypeName: MenuBoton, Assembly-CSharp
         m_MethodName: NextScena
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 8
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Controles
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &269358456
@@ -1167,13 +1167,13 @@ MonoBehaviour:
       - m_Target: {fileID: 273375612}
         m_TargetAssemblyTypeName: MenuBoton, Assembly-CSharp
         m_MethodName: NextScena
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 8
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Intro
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1524922948
@@ -1753,13 +1753,13 @@ MonoBehaviour:
       - m_Target: {fileID: 273375612}
         m_TargetAssemblyTypeName: MenuBoton, Assembly-CSharp
         m_MethodName: NextScena
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 6
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Creditos
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1971966217
