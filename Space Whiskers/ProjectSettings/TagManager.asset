@@ -12,6 +12,7 @@ TagManager:
   - Pate
   - Bullet
   - Suelo
+  - Camara
   layers:
   - Default
   - TransparentFX

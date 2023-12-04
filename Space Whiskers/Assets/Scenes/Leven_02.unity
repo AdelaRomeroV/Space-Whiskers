@@ -690,9 +690,9 @@ GameObject:
   - component: {fileID: 922481987}
   - component: {fileID: 922481990}
   - component: {fileID: 922481989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ColliderCamaraMov
-  m_TagString: Untagged
+  m_TagString: Camara
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -824,6 +824,7 @@ MonoBehaviour:
   Cam1: {fileID: 720077971}
   Cam2: {fileID: 116524568}
   maxTime: 0
+  camera2: 0
 --- !u!1 &1159206522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,19 +1375,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7765620838488254757, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765620838488254757, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
+      propertyPath: parametros.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7765620838488254757, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: parametros.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: be33d6cf4c288ab4588ff082ccaa3351, type: 2}
+    - target: {fileID: 7765620838488254757, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
+      propertyPath: parametros.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 30fc249cba3c0284d8a498dd1b8bbcbf, type: 2}
     - target: {fileID: 8885337646362396033, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 790177955}
     - target: {fileID: 9088726325406250914, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9088726325406250914, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: m_SortingLayerID

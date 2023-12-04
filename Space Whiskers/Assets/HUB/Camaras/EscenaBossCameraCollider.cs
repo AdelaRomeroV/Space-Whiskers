@@ -11,6 +11,8 @@ public class EscenaBossCameraCollider : MonoBehaviour
     float timer;
     [SerializeField] float maxTime;
 
+    [SerializeField] public bool camera2 = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -19,6 +21,7 @@ public class EscenaBossCameraCollider : MonoBehaviour
             Cam1.Priority = 0;
             Cam2.Priority = 100;
             timer = 0;
+            camera2 = true;
 
         }
     }
@@ -29,6 +32,7 @@ public class EscenaBossCameraCollider : MonoBehaviour
             Cam1.Priority = 100;
             Cam2.Priority = 0;
             timer = 0;
+            camera2 = false;
 
         }
     }
