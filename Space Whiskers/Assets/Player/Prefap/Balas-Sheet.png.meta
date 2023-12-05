@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 12a4409c004c56b44ae56544dcdf98e1
+guid: 73e58979d53a012438659b8b5d9f2ca7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,12 +84,12 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: controles_0
+      name: Balas-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 96
-        height: 64
+        x: 1
+        y: 19
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b2e16411d6a8d048b2221adc9878194
-      internalID: -384685939
+      spriteID: 1f49c03f8b599e746af765b9dcaca4ee
+      internalID: -519200394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_1
+      name: Balas-Sheet_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 64
-        height: 64
+        x: 19
+        y: 19
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f013fa7ea361e2947a15126359419521
-      internalID: 1133552527
+      spriteID: 0651feae3c104564d8e35eb048210728
+      internalID: 19582918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_2
+      name: Balas-Sheet_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 96
-        height: 32
+        x: 36
+        y: 18
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f02909b33bb79848a2c900aae55056b
-      internalID: -1736366415
+      spriteID: d597ff862d5c2574a89e54bb1e5a69d1
+      internalID: -2091683392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_3
+      name: Balas-Sheet_3
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
+        x: 1
+        y: 1
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a84132091ac0744bbffe72e74e88299
-      internalID: -1979356386
+      spriteID: 50df5a77fecd466419053917db5b98a2
+      internalID: 1645669926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controles_4
+      name: Balas-Sheet_4
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
+        x: 19
+        y: 1
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,29 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 393397c9ca32ffa45839332a0fce69ae
-      internalID: 216602402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: controles_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 326b603bc55016649a641c43dd2bc4a8
-      internalID: -6298589
+      spriteID: 4bb3aa0fdae10f64db89f96f13c6af67
+      internalID: 1974298137
       vertices: []
       indices: 
       edges: []
@@ -246,12 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      controles_0: -384685939
-      controles_1: 1133552527
-      controles_2: -1736366415
-      controles_3: -1979356386
-      controles_4: 216602402
-      controles_5: -6298589
+      Balas-Sheet_0: -519200394
+      Balas-Sheet_1: 19582918
+      Balas-Sheet_2: -2091683392
+      Balas-Sheet_3: 1645669926
+      Balas-Sheet_4: 1974298137
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
