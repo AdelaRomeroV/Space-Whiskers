@@ -9,7 +9,10 @@ public class BossShooter : MonoBehaviour
 
     public ShootParameters datos;
     private int orientacion = 1;
-    public void Play() { StartCoroutine(Begin()); }
+    public void Play()
+    { 
+        StartCoroutine(Begin());
+    }
     public void Stop() { StopAllCoroutines(); }
 
     private IEnumerator Begin()
