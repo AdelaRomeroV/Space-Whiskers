@@ -42,10 +42,9 @@ public class Explosion : MonoBehaviour
 
     private void HandleExplosion()
     {
-        timer -= Time.deltaTime;
         animador.SetBool("IsActivar", true);
 
-        if (timer <= 0 && explotando == false)
+        if (explotando == false)
         {
             animador.SetBool("Explota", true);
             explotando = true;
