@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
     private int balas = 30;
     private float recuperacion = 10f;
     [SerializeField] public bool metra = false;
+    public Image pata1;
+    public Image pata2;
 
     private PlayerLife vidaJugador;
 
@@ -86,14 +88,18 @@ public class Player : MonoBehaviour
             switch (bulletType)
             {
                 case 0:
-                    textoHUD.text = "Basic: " + "0 / 0";
+                    textoHUD.text = balas.ToString();
+                    pata1.gameObject.SetActive(true);
+                    pata2.gameObject.SetActive(false);
                     break;
                 case 1:
                     PlayerLife life = GetComponent<PlayerLife>();
-                    textoHUD.text = "Ulti: " + life.energy.ToString();
+                    textoHUD.text = life.energy.ToString();
                     break;
                 case 2:
-                    textoHUD.text = "Metralleta " + balas.ToString();
+                    textoHUD.text = balas.ToString();
+                    pata1.gameObject.SetActive(false);
+                    pata2.gameObject.SetActive(true);
                     break;
             }
         }
@@ -174,22 +180,22 @@ public class Player : MonoBehaviour
     {
         if (!isUltiActive)
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                metra = true;
-                bulletType = 2;
-            }
-
             if (balas <= 0)
             {
                 recuperacion -= Time.deltaTime;
                 metra = false;
-                if (recuperacion <= 0 && bulletType != 0)
+                if (recuperacion <= 0)
                 {
                     balas = 30;
                     recuperacion = 10f;
                 }
                 bulletType = 0;
+            }
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                metra = true;
+                bulletType = 2;
             }
         }
     }
