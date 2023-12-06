@@ -86,3 +86,6 @@ TagManager:
   - name: Interfaz
     uniqueID: 3929419631
     locked: 0
+  - name: Pausa
+    uniqueID: 39451377
+    locked: 0
