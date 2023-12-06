@@ -13,6 +13,7 @@ public class EnemyLife : MonoBehaviour
     private Animator animador;
     private Explosion d;
     private bool muerto = false;
+    private MovSeguimientoPlayerDis mov;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class EnemyLife : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animador = GetComponent<Animator>();
         d = GetComponent<Explosion>();
+        mov = GetComponent<MovSeguimientoPlayerDis>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +39,7 @@ public class EnemyLife : MonoBehaviour
             else if (life >= 1) 
             {
                 life -= collision.gameObject.GetComponent<DamagePlayer>().damageplayer;
+                mov.isAlert = true;
                 if (animador != null && d == null) { animador.SetTrigger("RecibeDaño"); }
                 StartCoroutine(CambiarColorTemporalmente(0.1f));
                 Destroy(collision.gameObject);

@@ -18,6 +18,8 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
     private Animator animador;
     private SpriteRenderer spriteRenderer;
 
+    public bool isAlert = false;
+
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -29,7 +31,7 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
 
-        if (colliders.Length > 0)
+        if (colliders.Length > 0 || isAlert == true)
         {
             lastPosition = transform.position;
 
@@ -48,6 +50,7 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
                 transform.position = this.transform.position;
                 if (animador != null)
                 {
+                    isAlert = false;
                     animador.SetBool("IsCaminar", false);
                 }
             }
@@ -61,6 +64,10 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
                 }
                 transform.position = Vector2.MoveTowards(transform.position, Player.position, -speed * Time.deltaTime); ;
             }
+        }
+        if (animador != null)
+        {
+            animador.SetBool("IsCaminar", false);
         }
     }
 
