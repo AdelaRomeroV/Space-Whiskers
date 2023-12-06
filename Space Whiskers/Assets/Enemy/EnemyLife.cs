@@ -27,7 +27,7 @@ public class EnemyLife : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
-        {          
+        {
             if (life <= 0 && !muerto)
             {
                 if (prefab != null) { Instantiate(prefab, transform.position, Quaternion.identity); }
@@ -36,10 +36,10 @@ public class EnemyLife : MonoBehaviour
                 muerto = true;
                 enemigosMt.enemigosMuertos++;
             }
-            else if (life >= 1) 
+            else if (life >= 1)
             {
                 life -= collision.gameObject.GetComponent<DamagePlayer>().damageplayer;
-                mov.isAlert = true;
+                if (mov != null) {mov.isAlert = true; }
                 if (animador != null && d == null) { animador.SetTrigger("RecibeDaño"); }
                 StartCoroutine(CambiarColorTemporalmente(0.1f));
                 Destroy(collision.gameObject);

@@ -46,6 +46,10 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public TextMeshProUGUI textoHUD;
 
+    public GameObject prevDash;
+
+    public float dashRadius = 2f;
+
     void Awake()
     {
         vidaJugador = GetComponent<PlayerLife>();
@@ -271,8 +275,26 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        if (Input.GetKey(KeyCode.Space) && canDash && (playerInput != Vector2.zero))
         {
+            Vector3 moveDirection = new Vector3(playerInput.x, playerInput.y, 0f).normalized;
+            Vector3 targetPosition = transform.position + moveDirection * dashRadius;
+
+            RaycastHit2D hit = Physics2D.Raycast(targetPosition, Vector2.down, 0.1f, LayerMask.GetMask("Suelo"));
+
+            prevDash.SetActive(hit.collider && Input.GetKey(KeyCode.Space) && canDash && (playerInput != Vector2.zero));
+
+            if (hit.collider)
+            {
+                prevDash.transform.position = hit.point;
+                prevDash.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg + offset);
+            }
+
+            prevDash.gameObject.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.Space) && canDash)
+        {
+            prevDash.gameObject.SetActive(false);
             StartCoroutine(Dash());
         }
     }
