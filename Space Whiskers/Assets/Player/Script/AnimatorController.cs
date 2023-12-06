@@ -13,6 +13,9 @@ public class AnimatorController : MonoBehaviour
     public GameObject prefabArma;
     private bool inicioDeAnimacionMuerte = false;
 
+    private Vector2 giro;
+    bool isgiro;
+
     void Start()
     {
         animador = GetComponent<Animator>();
@@ -42,13 +45,28 @@ public class AnimatorController : MonoBehaviour
 
     void ActualizarEscalaSprite(Vector2 direccion)
     {
-        if (direccion.x < 0)
+        if (Input.GetMouseButton(0))
         {
-            spriteRenderer.flipX = true;
+            Vector2 direccionDisparo = (Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position)).normalized;
+            if (direccionDisparo.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (direccionDisparo.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
-        else if (direccion.x > 0)
+        else
         {
-            spriteRenderer.flipX = false;
+            if (direccion.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (direccion.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
     }
 

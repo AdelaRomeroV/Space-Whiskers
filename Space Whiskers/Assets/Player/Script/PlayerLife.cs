@@ -38,7 +38,7 @@ public class PlayerLife : MonoBehaviour
         Player jugador = GetComponent<Player>();
         if (energy >= 15 && Input.GetKey(KeyCode.Q) && life < 4 && jugador.bulletType != 1)
         {
-            spriteRenderer.color = Color.green;
+            spriteRenderer.color = Color.blue;
             seCuro = true;
             timer -= Time.deltaTime;
             if (timer < 0)
