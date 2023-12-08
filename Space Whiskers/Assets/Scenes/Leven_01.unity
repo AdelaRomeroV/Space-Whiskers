@@ -3813,6 +3813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemigosMuertos: 0
+  puerta: {fileID: 0}
 --- !u!114 &1708622088
 MonoBehaviour:
   m_ObjectHideFlags: 0
