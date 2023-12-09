@@ -93,8 +93,11 @@ public class Player : MonoBehaviour
             {
                 case 0:
                     textoHUD.text = balas.ToString();
-                    pata1.gameObject.SetActive(true);
-                    pata2.gameObject.SetActive(false);
+                    if (!metra)
+                    {
+                        pata1.gameObject.SetActive(true);
+                        pata2.gameObject.SetActive(false);
+                    }
                     break;
                 case 1:
                     PlayerLife life = GetComponent<PlayerLife>();
@@ -102,8 +105,11 @@ public class Player : MonoBehaviour
                     break;
                 case 2:
                     textoHUD.text = balas.ToString();
-                    pata1.gameObject.SetActive(false);
-                    pata2.gameObject.SetActive(true);
+                    if(metra)
+                    {
+                        pata1.gameObject.SetActive(false);
+                        pata2.gameObject.SetActive(true);
+                    }
                     break;
             }
         }
@@ -198,8 +204,16 @@ public class Player : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                metra = true;
-                bulletType = 2;
+                if (metra || balas <= 0) 
+                {
+                    metra = false;
+                    bulletType = 0;
+                }
+                else if (!metra) 
+                {
+                    metra = true;
+                    bulletType = 2;
+                }
             }
         }
     }
