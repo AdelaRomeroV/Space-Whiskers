@@ -263,7 +263,6 @@ public class Player : MonoBehaviour
         if (hit.collider)
         {
             transform.position = targetPosition;
-
             if (transform.position != playerPosition)
             {
                 yield return new WaitForSeconds(dashDuration);
@@ -302,9 +301,8 @@ public class Player : MonoBehaviour
             {
                 prevDash.transform.position = hit.point;
                 prevDash.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg + offset);
+                prevDash.gameObject.SetActive(true);
             }
-
-            prevDash.gameObject.SetActive(true);
         }
         if (Input.GetKeyUp(KeyCode.Space) && canDash)
         {

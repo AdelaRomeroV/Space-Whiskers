@@ -6,14 +6,18 @@ public class ContadorDeEnemigos : MonoBehaviour
 {
     public int enemigosMuertos;
 
-    public GameObject puerta; 
+    public int enemigosMin;
+
+    public GameObject puerta;
+    public GameObject sueloZonaB;
 
     private void Update()
     {
-        if(enemigosMuertos >= 5)
+        if(enemigosMuertos >= enemigosMin)
         {
             if(puerta != null)
             {
+                sueloZonaB.layer = LayerMask.NameToLayer("Suelo");
                 Destroy(puerta.gameObject);
             }
         }
