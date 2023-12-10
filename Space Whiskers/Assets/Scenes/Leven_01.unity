@@ -2856,9 +2856,9 @@ RectTransform:
   m_Father: {fileID: 5474985532451058839}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -460, y: -292}
-  m_SizeDelta: {x: 62.5, y: 218.75}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -510, y: -343}
+  m_SizeDelta: {x: -37.5, y: 116.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1312211486463504523
 GameObject:
@@ -3331,8 +3331,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1eb1618aa67f1946966035f00be9e6c, type: 2}
+  m_sharedMaterial: {fileID: -1915888173471634802, guid: b1eb1618aa67f1946966035f00be9e6c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3356,8 +3356,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3445,7 +3445,7 @@ GameObject:
   - component: {fileID: 7613874653452529331}
   - component: {fileID: 2711617925090954697}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3614,7 +3614,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemigosMuertos: 0
+  enemigosMin: 0
   puerta: {fileID: 0}
+  sueloZonaB: {fileID: 0}
 --- !u!224 &4639776711996777265
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3802,8 +3804,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1eb1618aa67f1946966035f00be9e6c, type: 2}
+  m_sharedMaterial: {fileID: -1915888173471634802, guid: b1eb1618aa67f1946966035f00be9e6c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3904,10 +3906,10 @@ RectTransform:
   - {fileID: 2489011508391575102}
   m_Father: {fileID: 1658376211827710858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 120, y: 522}
-  m_SizeDelta: {x: -820, y: -456}
+  m_AnchorMin: {x: 0.019586505, y: 0.59000003}
+  m_AnchorMax: {x: 0.12755929, y: 1}
+  m_AnchoredPosition: {x: 512, y: 357.5}
+  m_SizeDelta: {x: 0, y: -127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &5556983117922075261
 Transform:
