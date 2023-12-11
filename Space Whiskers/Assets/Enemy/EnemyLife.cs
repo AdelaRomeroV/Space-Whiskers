@@ -12,7 +12,7 @@ public class EnemyLife : MonoBehaviour
 
     private Animator animador;
     private Explosion d;
-    private bool muerto = false;
+    public bool muerto = false;
     private MovSeguimientoPlayerDis mov;
 
     private void Awake()
@@ -58,6 +58,7 @@ public class EnemyLife : MonoBehaviour
 
     public void Muerto()
     {
+        muerto = true;
         Destroy(gameObject);
     }
 }

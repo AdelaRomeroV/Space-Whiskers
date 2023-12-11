@@ -22,9 +22,12 @@ public class AtaqCircular : MonoBehaviour
 
     private bool isShooting = false;
 
+    public EnemyLife vi;
+
     private void Awake()
     {
         target = GameObject.FindWithTag("Player").transform;
+        vi = GetComponent<EnemyLife>();
     }
 
     private void Start()
@@ -34,18 +37,25 @@ public class AtaqCircular : MonoBehaviour
 
     private void PersonalizedUpdate()
     {
-        isPlayerInRange = detection();
-
-        if (cooldown > 0f)
+        if (!vi.muerto)
         {
-            if (isPlayerInRange && !isShooting)
+            isPlayerInRange = detection();
+
+            if (cooldown > 0f)
             {
-                StartCoroutine(ShootAndCooldown());
+                if (isPlayerInRange && !isShooting)
+                {
+                    StartCoroutine(ShootAndCooldown());
+                }
+                else
+                {
+                    Stop();
+                }
             }
-            else
-            {
-                Stop();
-            }
+        }
+        else
+        {
+            Stop();
         }
     }
 

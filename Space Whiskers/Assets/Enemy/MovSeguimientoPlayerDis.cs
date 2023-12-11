@@ -15,7 +15,7 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
     public float detectionRadius; 
     public LayerMask playerLayer;
 
-    private Animator animador;
+    public Animator animador;
     private SpriteRenderer spriteRenderer;
 
     public bool isAlert = false;
@@ -65,9 +65,12 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, Player.position, -speed * Time.deltaTime); ;
             }
         }
-        if (animador != null)
+        else
         {
-            animador.SetBool("IsCaminar", false);
+            if (animador != null)
+            {
+                animador.SetBool("IsCaminar", false);
+            }
         }
     }
 

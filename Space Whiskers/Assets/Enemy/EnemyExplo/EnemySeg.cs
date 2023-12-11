@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class EnemySeg : MonoBehaviour
 {
-    private float speed;
-    public GameObject player;
+    public float speed;
+    public Transform player;
     private float distance;
+
+    private void Awake()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+    }
 
     // Update is called once per frame
     void Update()

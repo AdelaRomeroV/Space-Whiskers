@@ -20,9 +20,12 @@ public class EnemyDis : MonoBehaviour
     public Animator animator;
     public int var;
 
+    public EnemyLife vi;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        vi = GetComponent<EnemyLife>();
         timeBtwShots = startTimeBtwShots;
     }
     private void Start()
@@ -38,7 +41,7 @@ public class EnemyDis : MonoBehaviour
     }
     void DetectionPlayer ()
     {
-        if (player != null)
+        if (player != null && !vi.muerto)
         {
 
             if (detection() == true) 
@@ -50,6 +53,10 @@ public class EnemyDis : MonoBehaviour
                 cooldownTime = 0.5f;
                 timeBtwShots = startTimeBtwShots;
             }
+        }
+        else
+        {
+            StopAllCoroutines();
         }
     }
     private IEnumerator Shoot()
