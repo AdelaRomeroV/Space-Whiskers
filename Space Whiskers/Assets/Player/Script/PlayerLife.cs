@@ -108,6 +108,6 @@ public class PlayerLife : MonoBehaviour
 
     public void ManejorDeMuerte()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene("Game Over");
     }
 }
