@@ -19,6 +19,8 @@ public class Explosion : MonoBehaviour
 
     public bool explotando = false;
 
+    private EnemyLife vi;
+
     Collider2D miCollider;
 
     private void Awake()
@@ -27,11 +29,12 @@ public class Explosion : MonoBehaviour
         animador = GetComponent<Animator>();
         enemigosMt = GameObject.FindGameObjectWithTag("Player").GetComponent<ContadorDeEnemigos>();
         mov = GetComponent<MovSeguimientoPlayerDis>();
+        vi = GetComponent<EnemyLife>();
     }
 
     private void Update()
     {
-        if (detection())
+        if (detection() || vi.life <= 0)
         {
             HandleExplosion();
         }
