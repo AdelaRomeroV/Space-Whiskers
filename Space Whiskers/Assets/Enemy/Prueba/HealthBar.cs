@@ -46,7 +46,7 @@ public class HealthBar : MonoBehaviour
     {
         Player jugador = GetComponent<Player>();
         PlayerLife life = GetComponent<PlayerLife>();
-        if (!jugador.metra && life.energy >= 60 && Input.GetKeyUp(KeyCode.Q) && !life.seCuro)
+        if (life.energy >= 60)
         {
             fullUlti.gameObject.SetActive(true);
         }
