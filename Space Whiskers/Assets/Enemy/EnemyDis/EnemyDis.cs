@@ -25,7 +25,6 @@ public class EnemyDis : MonoBehaviour
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        vi = GetComponent<EnemyLife>();
         timeBtwShots = startTimeBtwShots;
     }
     private void Start()

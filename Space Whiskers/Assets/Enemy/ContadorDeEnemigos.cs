@@ -18,7 +18,19 @@ public class ContadorDeEnemigos : MonoBehaviour
             if(puerta != null)
             {
                 sueloZonaB.layer = LayerMask.NameToLayer("Suelo");
-                Destroy(puerta.gameObject);
+
+                Animator puertaAnimator = puerta.GetComponent<Animator>();
+                if (puertaAnimator != null)
+                {
+                    puertaAnimator.SetBool("Abriendo", true);
+                }
+
+                Collider2D puertaCollider = puerta.GetComponent<Collider2D>();
+
+                if (puertaCollider != null)
+                {
+                    puertaCollider.isTrigger = true;
+                }
             }
         }
     }

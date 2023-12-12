@@ -218,6 +218,7 @@ MonoBehaviour:
   life: 10
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
   enemigosMt: {fileID: 0}
+  muerto: 0
 --- !u!114 &5220362997709895642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +238,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  animador: {fileID: 0}
+  isAlert: 0
 --- !u!95 &1509608507380738732
 Animator:
   serializedVersion: 5
@@ -401,3 +404,4 @@ MonoBehaviour:
   - {fileID: 9100000, guid: fe093d77e9236ec4f84a2f2726770222, type: 2}
   animator: {fileID: 1509608507380738732}
   var: 1
+  vi: {fileID: 1193567308724524799}
