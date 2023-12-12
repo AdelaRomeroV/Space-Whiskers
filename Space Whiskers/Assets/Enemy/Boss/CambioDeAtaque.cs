@@ -12,6 +12,8 @@ public class CambioDeAtaque : MonoBehaviour
 
     private Animator animator;
 
+    public bool isPrueba;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -35,7 +37,7 @@ public class CambioDeAtaque : MonoBehaviour
         switch (numeroDeAtaque)
         { 
             case 0:
-                if(camaras != null)
+                if(isPrueba == false)
                 {
                     if (camaras.camera2 == true)
                     {
@@ -46,11 +48,20 @@ public class CambioDeAtaque : MonoBehaviour
                         metodos.datos = parametros[1];
                         yield return new WaitForSeconds(2f);
                     }
+                    metodos.datos = parametros[4];
                 }
-                metodos.datos = parametros[4];
+                else
+                {
+                    metodos.datos = parametros[1];
+                    yield return new WaitForSeconds(2f);
+                    metodos.datos = parametros[0];
+                    yield return new WaitForSeconds(5f);
+                    metodos.datos = parametros[1];
+                    yield return new WaitForSeconds(2f);
+                }
                 break;
             case 1:
-                if (camaras != null)
+                if (isPrueba == false)
                 {
                     if (camaras.camera2 == true)
                     {
@@ -61,19 +72,33 @@ public class CambioDeAtaque : MonoBehaviour
                         metodos.datos = parametros[1];
                         yield return new WaitForSeconds(2f);
                     }
+                    metodos.datos = parametros[4];
                 }
-                metodos.datos = parametros[4];
+                else
+                {
+                    metodos.datos = parametros[1];
+                    yield return new WaitForSeconds(2f);
+                    metodos.datos = parametros[2];
+                    yield return new WaitForSeconds(2f);
+                    metodos.datos = parametros[1];
+                    yield return new WaitForSeconds(2f);
+                }
                 break;
             case 2:
-                if (camaras != null)
+                if (isPrueba == false)
                 {
                     if (camaras.camera2 == true)
                     {
                         metodos.datos = parametros[3];
                         yield return new WaitForSeconds(2f);
                     }
+                    metodos.datos = parametros[4];
                 }
-                metodos.datos = parametros[4];
+                else
+                {
+                    metodos.datos = parametros[3];
+                    yield return new WaitForSeconds(2f);
+                }
                 break;
             default:
                 break;
