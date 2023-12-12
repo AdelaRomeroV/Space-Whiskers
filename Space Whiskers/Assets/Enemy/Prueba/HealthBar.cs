@@ -50,7 +50,7 @@ public class HealthBar : MonoBehaviour
         {
             fullUlti.gameObject.SetActive(true);
         }
-        else if (vi.energy <= 0)
+        else if (vi.energy <= 0 || life.curo)
         {
             fullUlti.gameObject.SetActive(false);
         }

@@ -18,6 +18,8 @@ public class PlayerLife : MonoBehaviour
 
     public bool seCuro = false;
 
+    public bool curo = false;
+
 
     private void Awake()
     {
@@ -48,12 +50,14 @@ public class PlayerLife : MonoBehaviour
                 timer = 1.5f;
                 spriteRenderer.color = Color.white;
                 seCuro = false;
+                curo = true;
             }
         }
         else if (Input.GetKeyUp(KeyCode.Q) || (Input.GetKey(KeyCode.Q) && life <= 4))
         {
             spriteRenderer.color = Color.white;
             seCuro = false;
+            curo = false;
         }
     }
 
