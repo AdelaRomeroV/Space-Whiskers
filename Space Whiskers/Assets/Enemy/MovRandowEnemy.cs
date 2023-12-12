@@ -9,7 +9,7 @@ public class MovRandowEnemy : MonoBehaviour
     public GameObject movementArea; // Objeto tiene el Sprite y el Collider donde se mueve
 
     private Vector2 wayPoint;
-    public BoxCollider2D movSprite; // Collider del área de movimiento
+    public Collider2D movSprite; // Collider del área de movimiento
 
     void Start()
     {
