@@ -10,50 +10,68 @@ public class CambioDeAtaque : MonoBehaviour
 
     private EscenaBossCameraCollider camaras;
 
+    private Animator animator;
+
     private void Awake()
     {
-        camaras = GameObject.FindGameObjectWithTag("Camara").GetComponent<EscenaBossCameraCollider>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
     {
         StartCoroutine(Ataques());
         metodos.Play();
+        Animation();
     }
+
+    public void Animation()
+    {
+        
+    }
+
     public IEnumerator Ataques()
     {
         numeroDeAtaque = Random.Range(0, parametros.Length);
         switch (numeroDeAtaque)
         { 
             case 0:
-                if (camaras.camera2 == true)
+                if(camaras != null)
                 {
-                    metodos.datos = parametros[1];
-                    yield return new WaitForSeconds(2f);
-                    metodos.datos = parametros[0];
-                    yield return new WaitForSeconds(5f);
-                    metodos.datos = parametros[1];
-                    yield return new WaitForSeconds(2f);
+                    if (camaras.camera2 == true)
+                    {
+                        metodos.datos = parametros[1];
+                        yield return new WaitForSeconds(2f);
+                        metodos.datos = parametros[0];
+                        yield return new WaitForSeconds(5f);
+                        metodos.datos = parametros[1];
+                        yield return new WaitForSeconds(2f);
+                    }
                 }
                 metodos.datos = parametros[4];
                 break;
             case 1:
-                if (camaras.camera2 == true)
+                if (camaras != null)
                 {
-                    metodos.datos = parametros[1];
-                    yield return new WaitForSeconds(2f);
-                    metodos.datos = parametros[2];
-                    yield return new WaitForSeconds(2f);
-                    metodos.datos = parametros[1];
-                    yield return new WaitForSeconds(2f);
+                    if (camaras.camera2 == true)
+                    {
+                        metodos.datos = parametros[1];
+                        yield return new WaitForSeconds(2f);
+                        metodos.datos = parametros[2];
+                        yield return new WaitForSeconds(2f);
+                        metodos.datos = parametros[1];
+                        yield return new WaitForSeconds(2f);
+                    }
                 }
                 metodos.datos = parametros[4];
                 break;
             case 2:
-                if (camaras.camera2 == true)
+                if (camaras != null)
                 {
-                    metodos.datos = parametros[3];
-                    yield return new WaitForSeconds(2f);
+                    if (camaras.camera2 == true)
+                    {
+                        metodos.datos = parametros[3];
+                        yield return new WaitForSeconds(2f);
+                    }
                 }
                 metodos.datos = parametros[4];
                 break;
