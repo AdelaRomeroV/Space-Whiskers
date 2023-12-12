@@ -74,9 +74,6 @@ TagManager:
   - name: Pared
     uniqueID: 2183636055
     locked: 0
-  - name: Npc
-    uniqueID: 1871341337
-    locked: 0
   - name: Camara
     uniqueID: 1552478897
     locked: 0
@@ -88,4 +85,7 @@ TagManager:
     locked: 0
   - name: Pausa
     uniqueID: 39451377
+    locked: 0
+  - name: Npc
+    uniqueID: 1871341337
     locked: 0
