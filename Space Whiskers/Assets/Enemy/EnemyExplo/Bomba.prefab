@@ -180,9 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c02807b8ecb7754a99dd884bde2e931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  stoppingDistancia: 1
-  retreatDistancie: 0
+  speed: 6
+  stoppingDistancia: 2
+  retreatDistancie: 1
   detectionRadius: 10
   playerLayer:
     serializedVersion: 2
