@@ -100,8 +100,7 @@ public class Player : MonoBehaviour
                     }
                     break;
                 case 1:
-                    PlayerLife life = GetComponent<PlayerLife>();
-                    textoHUD.text = life.energy.ToString();
+                    textoHUD.text = balas.ToString();
                     break;
                 case 2:
                     textoHUD.text = balas.ToString();
@@ -188,32 +187,29 @@ public class Player : MonoBehaviour
 
     void Metralleta()
     {
-        if (!isUltiActive)
+        if (balas <= 0)
         {
-            if (balas <= 0)
+            recuperacion -= Time.deltaTime;
+            metra = false;
+            if (recuperacion <= 0)
             {
-                recuperacion -= Time.deltaTime;
+                balas = 30;
+                recuperacion = 10f;
+            }
+            bulletType = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F) && !isUltiActive)
+        {
+            if (metra || balas <= 0) 
+            {
                 metra = false;
-                if (recuperacion <= 0)
-                {
-                    balas = 30;
-                    recuperacion = 10f;
-                }
                 bulletType = 0;
             }
-
-            if (Input.GetKeyDown(KeyCode.F) && !isUltiActive)
+            else if (!metra) 
             {
-                if (metra || balas <= 0) 
-                {
-                    metra = false;
-                    bulletType = 0;
-                }
-                else if (!metra) 
-                {
-                    metra = true;
-                    bulletType = 2;
-                }
+                metra = true;
+                bulletType = 2;
             }
         }
     }
