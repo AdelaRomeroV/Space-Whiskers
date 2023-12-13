@@ -12,7 +12,7 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
     private Transform Player;
     private Vector2 lastPosition;
 
-    public float detectionRadius; 
+    public float detectionRadius;
     public LayerMask playerLayer;
 
     public Animator animador;
@@ -20,14 +20,26 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
 
     public bool isAlert = false;
 
+    public EnemyLife vi;
+
     void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         spriteRenderer = GetComponent<SpriteRenderer>();
         animador = GetComponent<Animator>();
+        vi = GetComponent<EnemyLife>();
     }
 
     void Update()
+    {
+        if (vi.muerto != true)
+        {
+            Movimiento();
+        }
+
+    }
+
+    private void Movimiento()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
 
@@ -38,7 +50,7 @@ public class MovSeguimientoPlayerDis : MonoBehaviour
             if (Vector2.Distance(transform.position, Player.position) > stoppingDistancia)
             {
                 transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
-                if(animador!= null)
+                if (animador != null)
                 {
                     animador.SetBool("IsCaminar", true);
                     Flip();

@@ -180,11 +180,13 @@ MonoBehaviour:
   speed: 3
   stoppingDistancia: 5
   retreatDistancie: 5
-  detectionRadius: 30
+  detectionRadius: 9.8
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  animador: {fileID: 0}
   isAlert: 0
+  vi: {fileID: 0}
 --- !u!114 &8886005612864835774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +220,8 @@ MonoBehaviour:
   life: 8
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
   enemigosMt: {fileID: 0}
+  muerto: 0
+  isBoss: 0
 --- !u!114 &1664457517285077882
 MonoBehaviour:
   m_ObjectHideFlags: 0

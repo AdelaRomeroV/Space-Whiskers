@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyLife : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class EnemyLife : MonoBehaviour
     private Explosion d;
     public bool muerto = false;
     private MovSeguimientoPlayerDis mov;
+
+    public bool isBoss = false;
 
     private void Awake()
     {
@@ -39,7 +42,7 @@ public class EnemyLife : MonoBehaviour
             else if (life >= 1)
             {
                 life -= collision.gameObject.GetComponent<DamagePlayer>().damageplayer;
-                if (mov != null) {mov.isAlert = true; }
+                if (mov != null) { mov.isAlert = true; }
                 if (animador != null && d == null) { animador.SetTrigger("RecibeDaño"); }
                 StartCoroutine(CambiarColorTemporalmente(0.1f));
                 Destroy(collision.gameObject);
@@ -60,5 +63,9 @@ public class EnemyLife : MonoBehaviour
     {
         muerto = true;
         Destroy(gameObject);
+        if (isBoss == true)
+        {
+            SceneManager.LoadScene(5);
+        }
     }
 }

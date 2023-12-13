@@ -52,11 +52,12 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 8
-  chekRaius: 36.8
+  chekRaius: 15
   isPlayerInRange: 0
   updateInterval: 1
   cooldown: 3
   tiempoDisparo: 6
+  vi: {fileID: 6541335734425939499}
 --- !u!1 &8009200743665594231
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +225,8 @@ MonoBehaviour:
   life: 10
   prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
   enemigosMt: {fileID: 0}
+  muerto: 0
+  isBoss: 0
 --- !u!114 &658068936839585301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +243,7 @@ MonoBehaviour:
   range: 2.02
   movementArea: {fileID: 0}
   movSprite: {fileID: 0}
+  vi: {fileID: 0}
 --- !u!95 &-8396783377944664776
 Animator:
   serializedVersion: 5

@@ -46,9 +46,13 @@ public class Explosion : MonoBehaviour
         {
             animador.SetTrigger("Explota");
             explotando = true;
-            mov. speed = 0;
+            mov.speed = 0;
             miCollider.isTrigger = true;
-            enemigosMt.enemigosMuertos++;
+            if (vi.life > 0)
+            {
+                enemigosMt.enemigosMuertos++;
+            }
+
         }
     }
 
@@ -72,5 +76,4 @@ public class Explosion : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }

@@ -27,7 +27,6 @@ public class AtaqCircular : MonoBehaviour
     private void Awake()
     {
         target = GameObject.FindWithTag("Player").transform;
-        vi = GetComponent<EnemyLife>();
     }
 
     private void Start()
@@ -93,7 +92,7 @@ public class AtaqCircular : MonoBehaviour
     private IEnumerator Begin()
     {
         tiempoDisparo -= 1f;
-        if(tiempoDisparo > 0f)
+        if (tiempoDisparo > 0f)
         {
             direction.up = datos.focusTarget ? target.position - direction.position : Vector3.up;
 
@@ -110,7 +109,10 @@ public class AtaqCircular : MonoBehaviour
         for (int i = 0; i < datos.proyectilPerBurst; i++)
         {
             Vector3 pos = direction.position + (direction.up * datos.startingDistance);
-            Instantiate(bullet, pos, Quaternion.identity).GetComponent<BulletF>().dir = direction.up * speed;
+            if (!vi.muerto)
+            {
+                Instantiate(bullet, pos, Quaternion.identity).GetComponent<BulletF>().dir = direction.up * speed;
+            }
 
             direction.Rotate(Vector3.back, angle * orientacion);
             if (datos.timeDelay != 0) yield return new WaitForSeconds(datos.timeDelay);

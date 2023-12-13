@@ -10,15 +10,22 @@ public class Rot : MonoBehaviour
 
     public float offet = 90f;
 
+    private EnemyLife vi;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        vi = GetComponent<EnemyLife>();
     }
     private void Update()
     {
-        if(detection() == true)
+        if(detection() == true && !vi.muerto)
         {
             Rotate();
+        }
+        if(vi.muerto)
+        {
+            weapon.gameObject.SetActive(false);
         }
     }
 

@@ -8,7 +8,7 @@ public class CambioDeAtaque : MonoBehaviour
 
     public int numeroDeAtaque = 0;
 
-    private EscenaBossCameraCollider camaras;
+    public EscenaBossCameraCollider camaras;
 
     private Animator animator;
 
@@ -28,16 +28,16 @@ public class CambioDeAtaque : MonoBehaviour
 
     public void Animation()
     {
-        
+
     }
 
     public IEnumerator Ataques()
     {
         numeroDeAtaque = Random.Range(0, parametros.Length);
         switch (numeroDeAtaque)
-        { 
+        {
             case 0:
-                if(isPrueba == false)
+                if (isPrueba == false)
                 {
                     if (camaras.camera2 == true)
                     {

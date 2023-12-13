@@ -3286,6 +3286,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4858253162550473445, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
+      propertyPath: isBoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858253162550473445, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: prefab
       value: 
       objectReference: {fileID: 0}
@@ -3341,6 +3345,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7765620838488254757, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
+      propertyPath: camaras
+      value: 
+      objectReference: {fileID: 922481990}
     - target: {fileID: 7765620838488254757, guid: cac763f6d281b5a4d860665f93399c3e, type: 3}
       propertyPath: m_Enabled
       value: 1

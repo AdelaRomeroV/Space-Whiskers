@@ -11,6 +11,8 @@ public class MovRandowEnemy : MonoBehaviour
     private Vector2 wayPoint;
     public Collider2D movSprite; // Collider del área de movimiento
 
+    public EnemyLife vi;
+
     void Start()
     {
         LimitSprite();
@@ -18,10 +20,13 @@ public class MovRandowEnemy : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, wayPoint, speedE * Time.deltaTime);
-        if (Vector2.Distance(transform.position, wayPoint) < range)
+        if (vi.muerto != true)
         {
-            LimitSprite();
+            transform.position = Vector2.MoveTowards(transform.position, wayPoint, speedE * Time.deltaTime);
+            if (Vector2.Distance(transform.position, wayPoint) < range)
+            {
+                LimitSprite();
+            }
         }
     }
 
@@ -35,7 +40,7 @@ public class MovRandowEnemy : MonoBehaviour
         if (movementArea != null)
         {
             //UnityEditor.Handles.color = Color.yellow;
-           // UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, range);
+            // UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, range);
 
             Gizmos.color = new Color(1f, 1f, 1f, 0.3f);
             Gizmos.DrawIcon(transform.position, "Limit", true);

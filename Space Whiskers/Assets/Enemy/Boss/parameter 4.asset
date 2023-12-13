@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: parameter 4
   m_EditorClassIdentifier: 
   focusTarget: 1
-  proyectilPerBurst: 5
-  burstAngle: 360
+  proyectilPerBurst: 10
+  burstAngle: 180
   timeDelay: 0.1
   startingDistance: 3
   timeBetweenBurst: 1

@@ -20,8 +20,6 @@ public class EnemyDis : MonoBehaviour
     public Animator animator;
     public int var;
 
-    public EnemyLife vi;
-
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -38,12 +36,12 @@ public class EnemyDis : MonoBehaviour
         detection();
 
     }
-    void DetectionPlayer ()
+    void DetectionPlayer()
     {
-        if (player != null && !vi.muerto)
+        if (player != null)
         {
 
-            if (detection() == true) 
+            if (detection() == true)
             {
                 StartCoroutine(Shoot());
             }

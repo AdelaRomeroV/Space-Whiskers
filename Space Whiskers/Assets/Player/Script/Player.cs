@@ -202,7 +202,7 @@ public class Player : MonoBehaviour
                 bulletType = 0;
             }
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F) && !isUltiActive)
             {
                 if (metra || balas <= 0) 
                 {

@@ -6,14 +6,17 @@ public class SeguidorObjeto : MonoBehaviour
     public float velocidad = 5f;
     public float distanciaUmbral = 0.1f;
 
+    private EnemyLife vi;
+
     private void Awake()
     {
         personaje = GameObject.FindGameObjectWithTag("Player").transform;
+        vi = GetComponent<EnemyLife>();
     }
 
     void Update()
     {
-        if (personaje != null)
+        if (personaje != null && vi.muerto != true)
         {
             Vector3 direccion = personaje.position - transform.position;
             direccion.y = 0;
@@ -29,6 +32,5 @@ public class SeguidorObjeto : MonoBehaviour
             }
         }
     }
-
 }
 
