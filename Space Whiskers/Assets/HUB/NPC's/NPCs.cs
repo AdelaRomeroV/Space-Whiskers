@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [System.Serializable]
 public struct Dialogue
 {
-    public Image imagen;
+    public Sprite sprite;
     [TextArea(4, 6)] public string line;
 }
 public class NPCs : MonoBehaviour
@@ -18,6 +18,7 @@ public class NPCs : MonoBehaviour
 
     private float typingTime = 0.05f;
 
+    [SerializeField] Image foto;
     [SerializeField] private GameObject alertDialogo;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
@@ -74,6 +75,7 @@ public class NPCs : MonoBehaviour
     }
     private IEnumerator ShowLine()
     {
+        foto.sprite = dialogueLine[lineaIndex].sprite;
         dialogueText.text = string.Empty;
         foreach (char ch in dialogueLine[lineaIndex].line)
         {
