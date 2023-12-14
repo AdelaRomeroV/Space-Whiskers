@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,10 +113,10 @@ TextureImporter:
       name: DIalogos_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 80
-        height: 80
+        x: 15
+        y: 50
+        width: 145
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a89aacba33d677e40b6225d6298c0722
-      internalID: 370139899
+      spriteID: 85dcc16b26e5c984bbb56ed67a3a2451
+      internalID: -248980750
       vertices: []
       indices: 
       edges: []
@@ -134,29 +134,8 @@ TextureImporter:
       name: DIalogos_1
       rect:
         serializedVersion: 2
-        x: 120
-        y: 67
-        width: 66
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2651f4d542ca834eb9fa1fca620deea
-      internalID: -212321030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DIalogos_2
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 65
+        x: 23
+        y: 10
         width: 19
         height: 31
       alignment: 0
@@ -166,29 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ea01878b432e28469e822848e0f6aa3
-      internalID: 75876757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DIalogos_3
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 7
-        width: 144
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d27d7ffaeff5424fbb92ddc068d63aa
-      internalID: 248720147
+      spriteID: b1482d98c1692a9409d90ff9cd81eaae
+      internalID: 1069533143
       vertices: []
       indices: 
       edges: []
@@ -204,10 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DIalogos_0: 370139899
-      DIalogos_1: -212321030
-      DIalogos_2: 75876757
-      DIalogos_3: 248720147
+      DIalogos_0: -248980750
+      DIalogos_1: 1069533143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
