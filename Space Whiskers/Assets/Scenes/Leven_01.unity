@@ -433,6 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botonPausa: {fileID: 1277910278}
   menuPausa: {fileID: 1371261210}
+  pausa: 0
 --- !u!1 &136815905
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,8 +469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: -272}
-  m_SizeDelta: {x: 1413.01, y: 419.35}
+  m_AnchoredPosition: {x: 0.00017929, y: -241}
+  m_SizeDelta: {x: 1380.55, y: 373.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &136815907
 MonoBehaviour:
@@ -1321,7 +1322,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 73403882}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
-        m_MethodName: Reanudar
+        m_MethodName: ResetLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1986,8 +1987,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.66, y: -0.01}
-  m_SizeDelta: {x: 1190.66, y: 232.05}
+  m_AnchoredPosition: {x: 2.87, y: -6.04}
+  m_SizeDelta: {x: 1157.47, y: 183.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1519767844
 GameObject:
@@ -2281,8 +2282,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -493, y: 107}
-  m_SizeDelta: {x: 752.32, y: 752.32}
+  m_AnchoredPosition: {x: -479, y: 108}
+  m_SizeDelta: {x: 563.76, y: 563.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1730584765
 MonoBehaviour:
