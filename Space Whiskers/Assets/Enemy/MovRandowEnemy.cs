@@ -39,9 +39,6 @@ public class MovRandowEnemy : MonoBehaviour
     {
         if (movementArea != null)
         {
-            //UnityEditor.Handles.color = Color.yellow;
-            // UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, range);
-
             Gizmos.color = new Color(1f, 1f, 1f, 0.3f);
             Gizmos.DrawIcon(transform.position, "Limit", true);
         }

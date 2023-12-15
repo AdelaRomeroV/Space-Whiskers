@@ -53,6 +53,9 @@ TagManager:
   - name: Ground
     uniqueID: 3988355869
     locked: 0
+  - name: Decoracion
+    uniqueID: 1344038255
+    locked: 0
   - name: Area Enemy
     uniqueID: 2507105423
     locked: 0
