@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(vidaJugador.life > 0 && !vidaJugador.seCuro)
+        if (vidaJugador.life > 0 && !vidaJugador.seCuro)
         {
             movSpeed = 10;
             Mov();
@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
                     break;
                 case 2:
                     textoHUD.text = balas.ToString();
-                    if(metra)
+                    if (metra)
                     {
                         pata1.gameObject.SetActive(false);
                         pata2.gameObject.SetActive(true);
@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
             }
         }
     }
-    
+
     void Mov()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -196,17 +196,25 @@ public class Player : MonoBehaviour
                 balas = 30;
                 recuperacion = 10f;
             }
-            bulletType = 0;
+            if (!isUltiActive)
+            {
+                bulletType = 0;
+            }
+            else
+            {
+                bulletType = 1;
+            }
+
         }
 
         if (Input.GetKeyDown(KeyCode.F) && !isUltiActive)
         {
-            if (metra || balas <= 0) 
+            if (metra || balas <= 0)
             {
                 metra = false;
                 bulletType = 0;
             }
-            else if (!metra) 
+            else if (!metra)
             {
                 metra = true;
                 bulletType = 2;
@@ -300,11 +308,14 @@ public class Player : MonoBehaviour
                 prevDash.gameObject.SetActive(true);
             }
         }
+        else if (playerInput == Vector2.zero)
+        {
+            prevDash.gameObject.SetActive(false);
+        }
         if (Input.GetKeyUp(KeyCode.Space) && canDash)
         {
             prevDash.gameObject.SetActive(false);
             StartCoroutine(Dash());
         }
     }
-
 }
