@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aac2ffa8cc2874b4d850758ae9ee30f6
+guid: 71f5f07f12049db479ecd9240cf569a5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: derrota-Sheet_0
+      name: Laser_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 180
+        x: 8
+        y: 8
+        width: 50
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,113 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b9a84f7ba715924ab3a415390dd082d
-      internalID: 1223010342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: derrota-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 320
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b35c53f147aa99f45b0e4c0f38ea67ff
-      internalID: -812945935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: derrota-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 320
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be42b0a3d2ec80843a108e7cf0bd7c6d
-      internalID: -1986060246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: derrota-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 0
-        width: 320
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 548c79d3b03fd8341a5ae868d2c9f921
-      internalID: -479763350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: derrota-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 320
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 123443c09cbd98246a47e976aeafb6db
-      internalID: -163404448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: derrota-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 0
-        width: 320
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 801d1a813fa078b4c8606c867d188a02
-      internalID: 1032635872
+      spriteID: 58a4220dea64fef47b14fbed13565fb9
+      internalID: -1708713675
       vertices: []
       indices: 
       edges: []
@@ -246,12 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      derrota-Sheet_0: 1223010342
-      derrota-Sheet_1: -812945935
-      derrota-Sheet_2: -1986060246
-      derrota-Sheet_3: -479763350
-      derrota-Sheet_4: -163404448
-      derrota-Sheet_5: 1032635872
+      Laser_0: -1708713675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
