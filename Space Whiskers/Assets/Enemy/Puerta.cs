@@ -5,7 +5,6 @@ using UnityEngine;
 public class Puerta : MonoBehaviour
 {
     public GameObject puerta;
-    public GameObject sueloZonaB;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,7 +13,6 @@ public class Puerta : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.Return))
             {
-                sueloZonaB.layer = LayerMask.NameToLayer("Suelo");
 
                 Animator puertaAnimator = puerta.GetComponent<Animator>();
                 if (puertaAnimator != null)

@@ -10,10 +10,10 @@ public class MenuPausa : MonoBehaviour
     public GameObject menuPausa;
 
     public bool pausa;
-    int sceneNum;
+    string nombreEscenaActual;
     private void Start()
     {
-        sceneNum = SceneManager.sceneCount;
+        nombreEscenaActual = SceneManager.GetActiveScene().name;
     }
 
     public void Pausa()
@@ -34,7 +34,7 @@ public class MenuPausa : MonoBehaviour
     public void ResetLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneNum);
+        SceneManager.LoadScene(nombreEscenaActual);
     }
 
 
