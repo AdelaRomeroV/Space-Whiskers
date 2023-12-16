@@ -225,7 +225,7 @@ public class Player : MonoBehaviour
     void UltiShooting()
     {
         PlayerLife life = GetComponent<PlayerLife>();
-        if (!metra && life.energy >= 60 && Input.GetKeyUp(KeyCode.Q))
+        if (!metra && life.energy >= 40 && Input.GetKeyUp(KeyCode.Q))
         {
             bulletType = 1;
             StartCoroutine(State(life));

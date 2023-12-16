@@ -46,7 +46,7 @@ public class HealthBar : MonoBehaviour
     {
         Player jugador = GetComponent<Player>();
         PlayerLife life = GetComponent<PlayerLife>();
-        if (life.energy >= 60)
+        if (life.energy >= 40)
         {
             fullUlti.gameObject.SetActive(true);
         }
