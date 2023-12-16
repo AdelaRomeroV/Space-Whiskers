@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Threading;
-using Unity.VisualScripting;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -19,6 +14,8 @@ public class PlayerLife : MonoBehaviour
     public bool seCuro = false;
 
     public bool curo = false;
+
+    public GameObject particulas;
 
 
     private void Awake()
@@ -43,6 +40,7 @@ public class PlayerLife : MonoBehaviour
             spriteRenderer.color = Color.blue;
             seCuro = true;
             timer -= Time.deltaTime;
+            particulas.SetActive(true);
             if (timer < 0)
             {
                 energy -= 15;
@@ -50,12 +48,14 @@ public class PlayerLife : MonoBehaviour
                 timer = 1.5f;
                 spriteRenderer.color = Color.white;
                 seCuro = false;
+                particulas.SetActive(false);
                 curo = true;
             }
         }
         else if (Input.GetKeyUp(KeyCode.Q) || (Input.GetKey(KeyCode.Q) && life <= 4))
         {
             spriteRenderer.color = Color.white;
+            particulas.SetActive(false);
             seCuro = false;
             curo = false;
         }
