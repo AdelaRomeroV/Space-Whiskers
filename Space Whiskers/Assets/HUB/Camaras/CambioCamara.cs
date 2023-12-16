@@ -35,7 +35,7 @@ public class CambioCamara : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Cam1.Priority = 100;
+            Cam1.Priority = 0;
             Cam2.Priority = 0;
             timer = 0;
             
