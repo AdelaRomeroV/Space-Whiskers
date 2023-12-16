@@ -44,6 +44,7 @@ public class EnemyLife : MonoBehaviour
                 life -= collision.gameObject.GetComponent<DamagePlayer>().damageplayer;
                 if (mov != null) { mov.isAlert = true; }
                 if (animador != null && d == null) { animador.SetTrigger("RecibeDaño"); }
+                if (isBoss && life <= 100) { animador.SetBool("DemasiadoDaño", true); }
                 StartCoroutine(CambiarColorTemporalmente(0.1f));
                 Destroy(collision.gameObject);
             }
