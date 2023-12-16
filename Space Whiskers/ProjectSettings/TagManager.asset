@@ -89,12 +89,12 @@ TagManager:
   - name: Canvas
     uniqueID: 666126111
     locked: 0
-  - name: Npc
-    uniqueID: 1871341337
-    locked: 0
   - name: Pausa
     uniqueID: 39451377
     locked: 0
   - name: Interfaz
     uniqueID: 3929419631
+    locked: 0
+  - name: Npc
+    uniqueID: 1871341337
     locked: 0

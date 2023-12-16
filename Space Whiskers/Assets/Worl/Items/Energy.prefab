@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323577a9a59e5c1478dbdaf7221362cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enegyMax: 3
+  enegyMax: 5
   lifeMax: 0
 --- !u!58 &7518620055886504547
 CircleCollider2D:
