@@ -960,7 +960,7 @@ GameObject:
   - component: {fileID: 950352176}
   - component: {fileID: 950352175}
   - component: {fileID: 950352174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muros
   m_TagString: Untagged
   m_Icon: {fileID: 0}
