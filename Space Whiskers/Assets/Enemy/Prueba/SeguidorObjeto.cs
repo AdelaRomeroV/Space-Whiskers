@@ -8,6 +8,10 @@ public class SeguidorObjeto : MonoBehaviour
 
     private EnemyLife vi;
 
+    public bool isPrueba;
+
+    public EscenaBossCameraCollider camaras;
+
     private void Awake()
     {
         personaje = GameObject.FindGameObjectWithTag("Player").transform;
@@ -16,19 +20,26 @@ public class SeguidorObjeto : MonoBehaviour
 
     void Update()
     {
-        if (personaje != null && vi.muerto != true)
+        if (isPrueba == false)
         {
-            Vector3 direccion = personaje.position - transform.position;
-            direccion.y = 0;
-            direccion.Normalize();
+            if (camaras.camera2 == true)
+            {
+                if (personaje != null && vi.muerto != true)
+                {
+                    Vector3 direccion = personaje.position - transform.position;
+                    direccion.y = 0;
+                    direccion.Normalize();
 
-            if (Mathf.Abs(transform.position.x - personaje.position.x) < distanciaUmbral)
-            {
-                transform.position = new Vector3(personaje.position.x, transform.position.y, transform.position.z);
-            }
-            else
-            {
-                transform.position += direccion * velocidad * Time.deltaTime;
+                    if (Mathf.Abs(transform.position.x - personaje.position.x) < distanciaUmbral)
+                    {
+                        transform.position = new Vector3(personaje.position.x, transform.position.y, transform.position.z);
+                    }
+                    else
+                    {
+                        transform.position += direccion * velocidad * Time.deltaTime;
+                    }
+                }
+
             }
         }
     }
