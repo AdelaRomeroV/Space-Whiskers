@@ -53,11 +53,29 @@ TagManager:
   - name: Ground
     uniqueID: 3988355869
     locked: 0
+  - name: Area Enemy
+    uniqueID: 2507105423
+    locked: 0
+  - name: Pared
+    uniqueID: 2183636055
+    locked: 0
+  - name: Muros
+    uniqueID: 740324155
+    locked: 0
   - name: Decoracion
     uniqueID: 1344038255
     locked: 0
-  - name: Area Enemy
-    uniqueID: 2507105423
+  - name: Luces
+    uniqueID: 1439203293
+    locked: 0
+  - name: PanelControl
+    uniqueID: 2428675927
+    locked: 0
+  - name: Camara
+    uniqueID: 1552478897
+    locked: 0
+  - name: Enemy
+    uniqueID: 3210295595
     locked: 0
   - name: Player
     uniqueID: 1660080187
@@ -65,30 +83,18 @@ TagManager:
   - name: ArmaPlayer
     uniqueID: 1894168297
     locked: 0
-  - name: Enemy
-    uniqueID: 3210295595
-    locked: 0
   - name: Bullet
     uniqueID: 3352378645
     locked: 0
   - name: Canvas
     uniqueID: 666126111
     locked: 0
-  - name: Pared
-    uniqueID: 2183636055
-    locked: 0
-  - name: Camara
-    uniqueID: 1552478897
-    locked: 0
-  - name: Muros
-    uniqueID: 740324155
-    locked: 0
-  - name: Interfaz
-    uniqueID: 3929419631
+  - name: Npc
+    uniqueID: 1871341337
     locked: 0
   - name: Pausa
     uniqueID: 39451377
     locked: 0
-  - name: Npc
-    uniqueID: 1871341337
+  - name: Interfaz
+    uniqueID: 3929419631
     locked: 0
