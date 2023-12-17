@@ -14209,7 +14209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 135.35
+      value: 131.8
       objectReference: {fileID: 0}
     - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15393,7 +15393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 143.79
+      value: 139.6
       objectReference: {fileID: 0}
     - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -112261,6 +112261,71 @@ Transform:
   - {fileID: 1089178035}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2000528134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2271341995521274661, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_SortingLayer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271341995521274661, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1084671701
+      objectReference: {fileID: 0}
+    - target: {fileID: 2429674773061078036, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_Name
+      value: SpawnBullet (2)_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 146.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -145.7088
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2806712
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810341363761144348, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07ab93f9980c13f44a79a7e1207607f5, type: 3}
 --- !u!1 &2018374519
 GameObject:
   m_ObjectHideFlags: 0
@@ -119358,6 +119423,7 @@ SceneRoots:
   - {fileID: 1574293627}
   - {fileID: 1024756913}
   - {fileID: 1354907428}
+  - {fileID: 2000528134}
   - {fileID: 721348665}
   - {fileID: 652944087}
   - {fileID: 835261235}
