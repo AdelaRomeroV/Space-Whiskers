@@ -108486,7 +108486,6 @@ MonoBehaviour:
   seQuitoVida: 0
   seCuro: 0
   curo: 0
-  particulas: {fileID: 0}
 --- !u!222 &601933202355804622
 CanvasRenderer:
   m_ObjectHideFlags: 0

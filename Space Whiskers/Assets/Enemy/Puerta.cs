@@ -7,16 +7,17 @@ public class Puerta : MonoBehaviour
     public GameObject puerta;
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            if(Input.GetKey(KeyCode.Return))
+            Debug.Log("EstoyDentro");
+            if(Input.GetKeyDown(KeyCode.E))
             {
-
-                Animator puertaAnimator = puerta.GetComponent<Animator>();
+                Animator puertaAnimator = GetComponent<Animator>();
                 if (puertaAnimator != null)
                 {
+                    Debug.Log("Abriendo");
                     puertaAnimator.SetBool("Abriendo", true);
                 }
 
@@ -24,6 +25,7 @@ public class Puerta : MonoBehaviour
 
                 if (puertaCollider != null)
                 {
+                    Debug.Log("Col");
                     puertaCollider.isTrigger = true;
                 }
             }
