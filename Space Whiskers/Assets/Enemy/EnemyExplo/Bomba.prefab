@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1084671701
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -2098977039, guid: 6c3c3e90143465148ba29c514dd48ca1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -168,6 +168,7 @@ MonoBehaviour:
   prefab: {fileID: 0}
   enemigosMt: {fileID: 0}
   muerto: 0
+  isBoss: 0
 --- !u!114 &7912776039621194132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +190,7 @@ MonoBehaviour:
     m_Bits: 8
   animador: {fileID: 980336349864968641}
   isAlert: 0
+  vi: {fileID: 0}
 --- !u!114 &8782173963579644493
 MonoBehaviour:
   m_ObjectHideFlags: 0
