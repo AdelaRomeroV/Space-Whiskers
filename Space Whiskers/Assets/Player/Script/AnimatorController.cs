@@ -14,6 +14,7 @@ public class AnimatorController : MonoBehaviour
     private bool inicioDeAnimacionMuerte = false;
 
     private Vector2 giro;
+    private Vector2 playerInput;
     bool isgiro;
 
     void Start()
@@ -73,7 +74,13 @@ public class AnimatorController : MonoBehaviour
     void ActualizarAnimacionCaminar(Vector2 direccion)
     {
         estaCaminando = direccion.magnitude > 0.1f;
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        playerInput = new Vector2(moveX, moveY).normalized;
+
+        if ((playerInput != Vector2.zero))
         {
             animador.SetBool("Caminando", true);
         }
