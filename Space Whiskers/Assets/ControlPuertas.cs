@@ -24,10 +24,10 @@ public class ControlPuertas : MonoBehaviour
             case <= 3:
                 puertasDeNivel[0].bloqueo = false;
                 break;
-            case <= 5:
+            case <= 6:
                 puertasDeNivel[1].bloqueo = false;
                 break;
-            case <= 9:
+            case <= 11:
                 puertasDeNivel[2].bloqueo = false;
                 break;
         }

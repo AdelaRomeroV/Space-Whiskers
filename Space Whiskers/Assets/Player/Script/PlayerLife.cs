@@ -14,10 +14,14 @@ public class PlayerLife : MonoBehaviour
     public bool seCuro = false;
 
     public bool curo = false;
+    
+    public AudioClip[] sounds;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Update()
@@ -60,14 +64,22 @@ public class PlayerLife : MonoBehaviour
         
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
-            if (collision.gameObject.GetComponent<Damage>() != null) { life -= collision.gameObject.GetComponent<Damage>().damage; }
+            if (collision.gameObject.GetComponent<Damage>() != null) 
+            { 
+                life -= collision.gameObject.GetComponent<Damage>().damage;
+                audioSource.PlayOneShot(sounds[0]);
+            }
             Destroy(collision.gameObject);
             seQuitoVida = true;
         }
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            if (collision.gameObject.GetComponent<Damage>() != null) { life -= collision.gameObject.GetComponent<Damage>().damage; }
+            if (collision.gameObject.GetComponent<Damage>() != null) 
+            { 
+                life -= collision.gameObject.GetComponent<Damage>().damage;
+                audioSource.PlayOneShot(sounds[0]);
+            }
             seQuitoVida = true;
         }
     }
@@ -99,7 +111,11 @@ public class PlayerLife : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            if (collision.gameObject.GetComponent<Damage>() != null) { life -= collision.gameObject.GetComponent<Damage>().damage; }
+            if (collision.gameObject.GetComponent<Damage>() != null) 
+            { 
+                life -= collision.gameObject.GetComponent<Damage>().damage;
+                audioSource.PlayOneShot(sounds[0]);
+            }
             seQuitoVida = true;
         }
     }

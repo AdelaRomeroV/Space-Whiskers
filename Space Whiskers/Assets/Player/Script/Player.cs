@@ -49,9 +49,12 @@ public class Player : MonoBehaviour
     public GameObject prevDash;
 
     public float dashRadius = 2f;
+    public AudioClip[] sounds;
+    private AudioSource audioSource;
 
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         vidaJugador = GetComponent<PlayerLife>();
         rb2D = GetComponent<Rigidbody2D>();
         canDash = true;
@@ -168,6 +171,7 @@ public class Player : MonoBehaviour
                 {
                     nextShoop = Time.time + timerShots;
                     Instantiate(bullet[bulletType], shotPoint.position, shotPoint.rotation);
+                    audioSource.PlayOneShot(sounds[0]);
                 }
             }
         }
@@ -183,6 +187,7 @@ public class Player : MonoBehaviour
         balas--;
         nextShoop = Time.time + 0.1f;
         Instantiate(bullet[2], shotPoint.position, shotPoint.rotation * dispersion);
+        audioSource.PlayOneShot(sounds[1]);
     }
 
     void Metralleta()

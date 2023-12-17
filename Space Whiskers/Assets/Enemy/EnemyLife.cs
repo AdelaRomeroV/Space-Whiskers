@@ -66,7 +66,7 @@ public class EnemyLife : MonoBehaviour
         Destroy(gameObject);
         if (isBoss == true)
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
         }
     }
 }
