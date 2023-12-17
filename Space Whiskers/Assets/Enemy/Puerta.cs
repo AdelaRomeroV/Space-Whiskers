@@ -5,19 +5,17 @@ using UnityEngine;
 public class Puerta : MonoBehaviour
 {
     public GameObject puerta;
-
+    public bool bloqueo = true;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            Debug.Log("EstoyDentro");
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.E) && !bloqueo)
             {
                 Animator puertaAnimator = GetComponent<Animator>();
                 if (puertaAnimator != null)
                 {
-                    Debug.Log("Abriendo");
                     puertaAnimator.SetBool("Abriendo", true);
                 }
 
@@ -25,7 +23,6 @@ public class Puerta : MonoBehaviour
 
                 if (puertaCollider != null)
                 {
-                    Debug.Log("Col");
                     puertaCollider.isTrigger = true;
                 }
             }
