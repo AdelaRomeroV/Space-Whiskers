@@ -135,7 +135,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1084671701
-  m_SortingLayer: 5
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 1203238915, guid: f3aa4d1f306629748801ce757487e6e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -222,8 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10
-  prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
+  life: 8
+  prefab: {fileID: 5457702409359363421, guid: 0698d249079784e47ade6123c68794f7, type: 3}
   enemigosMt: {fileID: 0}
   muerto: 0
   isBoss: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6c09423af07c44b80060e459b6b8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedE: 6
+  speedE: 9
   range: 2.02
   movementArea: {fileID: 0}
   movSprite: {fileID: 0}

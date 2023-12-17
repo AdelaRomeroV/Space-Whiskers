@@ -110,7 +110,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1084671701
-  m_SortingLayer: 5
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -1904004272, guid: d96ba266ab806c44f8db0216a86c9be4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -215,10 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10
-  prefab: {fileID: 4931386228176442731, guid: 9379c9220223bfa469dffafdbe59d718, type: 3}
+  life: 6
+  prefab: {fileID: 5457702409359363421, guid: 0698d249079784e47ade6123c68794f7, type: 3}
   enemigosMt: {fileID: 0}
   muerto: 0
+  isBoss: 0
 --- !u!114 &5220362997709895642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +241,7 @@ MonoBehaviour:
     m_Bits: 8
   animador: {fileID: 0}
   isAlert: 0
+  vi: {fileID: 0}
 --- !u!95 &1509608507380738732
 Animator:
   serializedVersion: 5
@@ -333,7 +335,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1084671701
-  m_SortingLayer: 5
+  m_SortingLayer: 9
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 33748254ff51ce74cb2603b3c8775029, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -404,4 +406,3 @@ MonoBehaviour:
   - {fileID: 9100000, guid: fe093d77e9236ec4f84a2f2726770222, type: 2}
   animator: {fileID: 1509608507380738732}
   var: 1
-  vi: {fileID: 1193567308724524799}

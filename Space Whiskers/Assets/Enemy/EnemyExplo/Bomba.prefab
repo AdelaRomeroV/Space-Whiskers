@@ -151,7 +151,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.0434783
+  m_Radius: 0.75
 --- !u!114 &3942184480082507718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
-  prefab: {fileID: 0}
+  life: 4
+  prefab: {fileID: 5457702409359363421, guid: 0698d249079784e47ade6123c68794f7, type: 3}
   enemigosMt: {fileID: 0}
   muerto: 0
   isBoss: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   speed: 6
   stoppingDistancia: 2
   retreatDistancie: 1
-  detectionRadius: 10
+  detectionRadius: 5.15
   playerLayer:
     serializedVersion: 2
     m_Bits: 8

@@ -78,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1084671701
-  m_SortingLayer: 5
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -102675285, guid: ee11719f0ae5c4544b1e2cd036ceb03a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -138,6 +138,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 30fc249cba3c0284d8a498dd1b8bbcbf, type: 2}
   metodos: {fileID: 8885337646362396033}
   numeroDeAtaque: 0
+  camaras: {fileID: 0}
+  isPrueba: 0
 --- !u!114 &4858253162550473445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,10 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9410d70cb183bb4881ea642a1840125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 200
+  life: 100
   prefab: {fileID: 0}
   enemigosMt: {fileID: 0}
   muerto: 0
+  isBoss: 0
 --- !u!114 &4198656238023369589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +172,8 @@ MonoBehaviour:
   personaje: {fileID: 0}
   velocidad: 5
   distanciaUmbral: 0.1
+  isPrueba: 0
+  camaras: {fileID: 0}
 --- !u!95 &2627090648961417897
 Animator:
   serializedVersion: 5
