@@ -908,7 +908,7 @@ RectTransform:
   - {fileID: 1438927252}
   - {fileID: 1840393062}
   - {fileID: 1535771552}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1895843489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -933,7 +933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1029055268
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2228,7 +2228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.855038, y: -43.126358}
+  m_AnchoredPosition: {x: -3.6112175, y: -62.150593}
   m_SizeDelta: {x: 468.938, y: 298.425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1785640597
@@ -2469,7 +2469,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 909445864}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2017107845
@@ -2661,7 +2662,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Leven_01
+          m_StringArgument: Nivel Intro
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!95 &2017107850
@@ -2691,7 +2692,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1706270773}
   - {fileID: 1895843489}
-  - {fileID: 909445864}
   - {fileID: 891011441}
   - {fileID: 1287279961}
   - {fileID: 897690083}
