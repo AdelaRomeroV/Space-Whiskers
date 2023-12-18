@@ -21,14 +21,14 @@ public class ControlPuertas : MonoBehaviour
     {
         switch (enemy.enemigosMuertos) 
         {
-            case <= 3:
-                puertasDeNivel[0].bloqueo = false;
+            case >= 11:
+                puertasDeNivel[2].bloqueo = false;
                 break;
-            case <= 6:
+            case >= 6:
                 puertasDeNivel[1].bloqueo = false;
                 break;
-            case <= 11:
-                puertasDeNivel[2].bloqueo = false;
+            case >= 3:
+                puertasDeNivel[0].bloqueo = false;
                 break;
         }
     }    

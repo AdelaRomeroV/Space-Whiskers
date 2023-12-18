@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1875014128580348652}
   m_Layer: 0
   m_Name: Comida Items
-  m_TagString: Untagged
+  m_TagString: Pate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -306611427
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1380135607, guid: e5ee7abf6f79aaf4ba9dea0a524798dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

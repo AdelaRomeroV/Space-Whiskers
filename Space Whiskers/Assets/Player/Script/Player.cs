@@ -52,6 +52,8 @@ public class Player : MonoBehaviour
     public AudioClip[] sounds;
     private AudioSource audioSource;
 
+    public GameObject npcDialogo;
+
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -69,7 +71,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (vidaJugador.life > 0 && !vidaJugador.seCuro)
+        if (vidaJugador.life > 0 && !vidaJugador.seCuro && !npcDialogo.activeSelf)
         {
             movSpeed = 10;
             Mov();

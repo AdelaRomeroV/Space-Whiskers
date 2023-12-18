@@ -27,24 +27,36 @@ public class EnemyLife : MonoBehaviour
         mov = GetComponent<MovSeguimientoPlayerDis>();
     }
 
+    private void Update()
+    {
+        if (isBoss)
+        {
+            if (life <= 0 && !muerto)
+            {
+                muerto = true;
+                animador.SetTrigger("Muerto");
+            }
+
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
             if (life <= 0 && !muerto)
             {
+                muerto = true;
                 if (prefab != null) { Instantiate(prefab, transform.position, Quaternion.identity); }
                 if (animador != null && d == null) { animador.SetTrigger("Muerto"); }
                 else if (d != null || animador == null) { Muerto(); }
-                muerto = true;
                 enemigosMt.enemigosMuertos++;
             }
             else if (life >= 1)
             {
                 life -= collision.gameObject.GetComponent<DamagePlayer>().damageplayer;
                 if (mov != null) { mov.isAlert = true; }
-                if (animador != null && d == null) { animador.SetTrigger("RecibeDaño"); }
-                if (isBoss && life <= 50) { animador.SetBool("DemasiadoDaño", true); }
+                if (!isBoss && animador != null && d == null) { animador.SetTrigger("RecibeDaño"); }
+                if (isBoss && life <= 50 && !muerto && life >= 1) { animador.SetBool("DemasiadoDaño", true); }
                 StartCoroutine(CambiarColorTemporalmente(0.1f));
                 Destroy(collision.gameObject);
             }

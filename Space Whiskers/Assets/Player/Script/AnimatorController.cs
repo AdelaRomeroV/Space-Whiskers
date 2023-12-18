@@ -17,6 +17,8 @@ public class AnimatorController : MonoBehaviour
     private Vector2 playerInput;
     bool isgiro;
 
+    public GameObject npcDialogo;
+
     void Start()
     {
         animador = GetComponent<Animator>();
@@ -27,9 +29,12 @@ public class AnimatorController : MonoBehaviour
 
     void Update()
     {
-        ManejarMovimiento();
-        ManejarDanio();
-        ManejarMuerte();
+        if (!npcDialogo.activeSelf)
+        {
+            ManejarMovimiento();
+            ManejarDanio();
+            ManejarMuerte();
+        }
     }
 
     void ManejarMovimiento()

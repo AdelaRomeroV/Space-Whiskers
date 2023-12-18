@@ -72,6 +72,16 @@ public class PlayerLife : MonoBehaviour
             Destroy(collision.gameObject);
             seQuitoVida = true;
         }
+        if (collision.gameObject.CompareTag("EnemyBulletBoss"))
+        {
+            if (collision.gameObject.GetComponent<Damage>() != null)
+            {
+                life -= collision.gameObject.GetComponent<Damage>().damage;
+                audioSource.PlayOneShot(sounds[0]);
+            }
+            Destroy(collision.gameObject);
+            seQuitoVida = true;
+        }
 
         if (collision.gameObject.CompareTag("Enemy"))
         {

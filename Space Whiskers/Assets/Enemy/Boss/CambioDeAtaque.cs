@@ -23,17 +23,11 @@ public class CambioDeAtaque : MonoBehaviour
     {
         StartCoroutine(Ataques());
         metodos.Play();
-        Animation();
-    }
-
-    public void Animation()
-    {
-
     }
 
     public IEnumerator Ataques()
     {
-        numeroDeAtaque = Random.Range(0, parametros.Length);
+        numeroDeAtaque = Random.Range(0, 4);
         switch (numeroDeAtaque)
         {
             case 0:
@@ -94,10 +88,18 @@ public class CambioDeAtaque : MonoBehaviour
                     }
                     metodos.datos = parametros[4];
                 }
-                else
+                break;
+            case 3:
+                if (isPrueba == false)
                 {
-                    metodos.datos = parametros[3];
-                    yield return new WaitForSeconds(2f);
+                    if (camaras.camera2 == true)
+                    {
+                        metodos.datos = parametros[5];
+                        metodos.disparoRebote = true;
+                        yield return new WaitForSeconds(4f);
+                        metodos.disparoRebote = false;
+                    }
+                    metodos.datos = parametros[4];
                 }
                 break;
             default:

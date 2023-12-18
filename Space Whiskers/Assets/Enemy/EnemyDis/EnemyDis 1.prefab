@@ -235,7 +235,7 @@ MonoBehaviour:
   speed: 6
   stoppingDistancia: 5
   retreatDistancie: 4
-  detectionRadius: 15
+  detectionRadius: 8.5
   playerLayer:
     serializedVersion: 2
     m_Bits: 8

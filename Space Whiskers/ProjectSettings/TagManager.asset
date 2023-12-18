@@ -13,6 +13,7 @@ TagManager:
   - Bullet
   - Suelo
   - Camara
+  - EnemyBulletBoss
   layers:
   - Default
   - TransparentFX
