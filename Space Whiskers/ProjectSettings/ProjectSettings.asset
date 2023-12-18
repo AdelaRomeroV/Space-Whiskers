@@ -16,10 +16,10 @@ PlayerSettings:
   productName: Galaxy Meow
   defaultCursor: {fileID: 2800000, guid: 5c1e33d73acef834b93ca08e28204cdf, type: 3}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.14994659, g: 0.63463193, b: 0.6792453, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.09537001, g: 0.038376633, b: 0.26415092, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
-  m_SplashScreenOverlayOpacity: 1
+  m_SplashScreenOverlayOpacity: 0.997
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
   m_SplashScreenDrawMode: 1
@@ -42,7 +42,7 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
     duration: 2
-  - logo: {fileID: 0}
+  - logo: {fileID: 21300000, guid: f25a061d099003740a6eb82e18cb87a7, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -285,7 +285,7 @@ PlayerSettings:
   - m_BuildTarget: Standalone
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: f25a061d099003740a6eb82e18cb87a7, type: 3}
       m_Width: 1024
       m_Height: 1024
       m_Kind: 0
@@ -612,7 +612,7 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 0}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: c64366d5c536736429f8b2636e732f81, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
