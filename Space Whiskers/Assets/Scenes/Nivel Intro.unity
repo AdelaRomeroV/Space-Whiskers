@@ -12288,7 +12288,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 03def13735195ac48b9a775cd98fa78e, type: 3}
   - {fileID: 8300000, guid: 147f9970432247e4ea7a723e9accf7d5, type: 3}
-  npcDialogo: {fileID: 281446881}
+  npcDialogo: {fileID: 240212447}
 --- !u!114 &1015213021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12302,7 +12302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabArma: {fileID: 154640597}
-  npcDialogo: {fileID: 281446881}
+  npcDialogo: {fileID: 240212447}
 --- !u!212 &1015213022
 SpriteRenderer:
   m_ObjectHideFlags: 0

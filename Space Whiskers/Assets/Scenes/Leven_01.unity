@@ -74346,6 +74346,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6541335734425939499, guid: 87e757529c77e134594987982e9885a1, type: 3}
+      propertyPath: life
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7171549420120416624, guid: 87e757529c77e134594987982e9885a1, type: 3}
       propertyPath: chekRaius
       value: 9.3

@@ -113,9 +113,9 @@ public class PlayerLife : MonoBehaviour
             Destroy(collision.gameObject);
             life += collision.gameObject.GetComponent<Items>().lifeMax;
 
-            if (life >= 5)
+            if (life >= 4)
             {
-                life = 5;
+                life = 4;
             }
         }
 
