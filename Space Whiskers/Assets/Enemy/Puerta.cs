@@ -11,7 +11,7 @@ public class Puerta : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            if(Input.GetKeyDown(KeyCode.E) && !bloqueo)
+            if (Input.GetKey(KeyCode.E) && !bloqueo)
             {
                 Animator puertaAnimator = GetComponent<Animator>();
                 if (puertaAnimator != null)
