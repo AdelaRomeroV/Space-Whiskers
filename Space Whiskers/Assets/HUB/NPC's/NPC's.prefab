@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 6357548864542614352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01499939, y: 1.0983009, z: 0}
-  m_LocalScale: {x: 2.9743, y: 2.9743, z: 2.9743}
+  m_LocalPosition: {x: -0.02, y: 1.4604, z: 0}
+  m_LocalScale: {x: 3.8478317, y: 3.8478317, z: 3.8478317}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2445858916114088873}
@@ -70,10 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1871341337
+  m_SortingLayer: 16
   m_SortingOrder: 0
-  m_Sprite: {fileID: 75876757, guid: 9e9060b2cfc2cc944b0b0648b2d18409, type: 3}
+  m_Sprite: {fileID: -1091663871, guid: fe7daa89d0c332647aa7fa9f40b319ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 0.19, y: 0.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7895530893718086945
@@ -114,7 +114,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 90.49, y: -62.93, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.704, y: 0.704, z: 0.704}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3248436420740564950}
@@ -158,8 +158,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1871341337
-  m_SortingLayer: 16
+  m_SortingLayerID: -1866291369
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -1319154552, guid: 89e50394e5c3f1c4292ded43677621f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -204,7 +204,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.74}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -215,7 +215,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.88, y: 1.05}
   m_EdgeRadius: 0
 --- !u!114 &5303615193615830881
 MonoBehaviour:
@@ -234,12 +234,18 @@ MonoBehaviour:
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
   dialogueLine:
-  - sprite: {fileID: 0}
-    line: Soldado bigote,Caz me comento que Rrondi no te explico tus habilidades,
-      asi que por este dispositivo te estare indicando que hacer.
-  - sprite: {fileID: 0}
-    line: A la hora que veas un comunicador que brille, presiona la tecla E para
-      interactuar.
+  - sprite: {fileID: 21300000, guid: 717517d2ed4f79e419b408e08b8190bb, type: 3}
+    line: "Soldier Whiskers, Caz told me that Rondi didn\xB4t explain your abilities,
+      so I\xB4ll tell you what to do by call."
+  - sprite: {fileID: 21300000, guid: 717517d2ed4f79e419b408e08b8190bb, type: 3}
+    line: 'When you see a shining screen, press the key E to interact with it. You
+      can also open the doors with the key E, but only if you took care of all the
+      enemies already.
+
+'
+  - sprite: {fileID: 21300000, guid: 63e9e96a4e24df4429de2420ce8f6b0b, type: 3}
+    line: ' Woof Woof Woof Woof  Woof Woof Woof Woof Woof  WoofWoof Woof Woof Woof 
+      Woof!.'
 --- !u!61 &3100449935116736446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -272,7 +278,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.41}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -283,5 +289,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.95, y: 1.95}
+  m_Size: {x: 1.95, y: 4.6}
   m_EdgeRadius: 0

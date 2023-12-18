@@ -96,7 +96,7 @@ public class CambioDeAtaque : MonoBehaviour
                     {
                         metodos.datos = parametros[5];
                         metodos.disparoRebote = true;
-                        yield return new WaitForSeconds(4f);
+                        yield return new WaitForSeconds(2f);
                         metodos.disparoRebote = false;
                     }
                     metodos.datos = parametros[4];

@@ -1601,6 +1601,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240212447}
   m_CullTransparentMesh: 1
+--- !u!1 &281446881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 281446882}
+  m_Layer: 0
+  m_Name: X
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &281446882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281446881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 139.83005, y: -94.96776, z: -0.5610624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &322600056
 GameObject:
   m_ObjectHideFlags: 0
@@ -8040,6 +8071,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 03def13735195ac48b9a775cd98fa78e, type: 3}
   - {fileID: 8300000, guid: 147f9970432247e4ea7a723e9accf7d5, type: 3}
+  npcDialogo: {fileID: 281446881}
 --- !u!114 &1015213021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8053,6 +8085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabArma: {fileID: 154640597}
+  npcDialogo: {fileID: 281446881}
 --- !u!212 &1015213022
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16171,3 +16204,4 @@ SceneRoots:
   - {fileID: 2001532960}
   - {fileID: 1196475271}
   - {fileID: 667670264}
+  - {fileID: 281446882}
