@@ -2532,7 +2532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS start
+  m_text: ' start'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 51a546c5622617b4cae06f820f7d161e, type: 2}
   m_sharedMaterial: {fileID: 7383065220576574925, guid: 51a546c5622617b4cae06f820f7d161e, type: 2}

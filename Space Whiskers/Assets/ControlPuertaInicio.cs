@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlPuertas2 : MonoBehaviour
+public class ControlPuertaInicio : MonoBehaviour
 {
     private ContadorDeEnemigos enemy;
 
@@ -21,18 +21,10 @@ public class ControlPuertas2 : MonoBehaviour
     {
         switch (enemy.enemigosMuertos)
         {
-            case >= 15:
-                puertasDeNivel[3].bloqueo = false;
-                break;
-            case >= 10:
-                puertasDeNivel[2].bloqueo = false;
-                break;
-            case >= 8:
-                puertasDeNivel[1].bloqueo = false;
-                break;
-            case >= 5:
+            case >=0:
                 puertasDeNivel[0].bloqueo = false;
                 break;
+
         }
     }
 }
