@@ -17,6 +17,12 @@ public class Player : MonoBehaviour
     private float dashCounter;
     private float dashCoolCounter;
 
+    /*public float speed = 5f;
+    public float dodgeRollDistance = 3f;
+    public float dodgeRollDuration = 0.5f;
+    public float dodgeRollSpeed = 10f;
+    private bool isDodging = false;*/
+
     [Header("Weapon")]
     public Transform weapon;
     public Sprite[] weaponSprites;
@@ -239,6 +245,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            //StartCoroutine(PerformDodgeRoll());
             if (dashCoolCounter <= 0 && dashCounter <= 0)
             {
                 spriteRenderer.color = Color.green;
@@ -261,4 +268,22 @@ public class Player : MonoBehaviour
             dashCoolCounter -= Time.deltaTime;
         }
     }
+
+    /*IEnumerator PerformDodgeRoll()
+    {
+        isDodging = true;
+
+        Vector3 dodgeDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f).normalized;
+        Vector3 initialPosition = transform.position;
+
+        float elapsedTime = 0f;
+        while (elapsedTime < dodgeRollDuration)
+        {
+            transform.Translate(dodgeDirection * dodgeRollSpeed * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        isDodging = false;
+    }*/
 }
