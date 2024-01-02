@@ -85,13 +85,20 @@ public class AnimatorController : MonoBehaviour
 
         playerInput = new Vector2(moveX, moveY).normalized;
 
-        if ((playerInput != Vector2.zero))
-        {
-            animador.SetBool("Caminando", true);
-        }
+        Player jugador = GetComponent<Player>();
+
+        if(jugador.movSpeed == 0) { animador.SetBool("Caminando", false); }
         else
         {
-            animador.SetBool("Caminando", false);
+
+            if (playerInput != Vector2.zero)
+            {
+                animador.SetBool("Caminando", true);
+            }
+            else
+            {
+                animador.SetBool("Caminando", false);
+            }
         }
     }
 

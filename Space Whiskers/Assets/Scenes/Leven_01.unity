@@ -4880,10 +4880,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movSpeed: 10
-  activeMoveSpeed: 0
-  dashSpeed: 20
-  dashLeght: 0.5
-  dashCooldown: 1
+  dashSpeed: 5
+  dashDuration: 0
+  dashCoolDown: 0.25
+  ignoreCollisionDuration: 0.25
   weapon: {fileID: 8823009125311377306}
   weaponSprites:
   - {fileID: 21300000, guid: 37fe97643aa57f8448c286127493d11c, type: 3}

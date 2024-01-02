@@ -11,17 +11,13 @@ public class Player : MonoBehaviour
     public float movSpeed;
 
     [Header("Dash")]
-    public float activeMoveSpeed;
     public float dashSpeed;
-    public float dashLeght = 0.5f, dashCooldown = 1f;
-    private float dashCounter;
-    private float dashCoolCounter;
-
-    /*public float speed = 5f;
-    public float dodgeRollDistance = 3f;
-    public float dodgeRollDuration = 0.5f;
-    public float dodgeRollSpeed = 10f;
-    private bool isDodging = false;*/
+    public float dashDuration;
+    public float dashCoolDown;
+    private bool isDah;
+    private bool canDash;
+    public float ignoreCollisionDuration = 5f;
+    private float ignoreCollisionTimer = 0f;
 
     [Header("Weapon")]
     public Transform weapon;
@@ -63,15 +59,21 @@ public class Player : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         vidaJugador = GetComponent<PlayerLife>();
         rb2D = GetComponent<Rigidbody2D>();
-        activeMoveSpeed = movSpeed;
+        canDash = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         GameObject textoHUDObject = GameObject.Find("Municion");
         if (textoHUDObject != null) { textoHUD = textoHUDObject.GetComponent<TextMeshProUGUI>(); }
     }
+    private void FixedUpdate()
+    {
+        rb2D.MovePosition(rb2D.position + playerInput * movSpeed * Time.deltaTime);
+    }
+
     void Update()
     {
         if (vidaJugador.life > 0 && !vidaJugador.seCuro && !npcDialogo.activeSelf)
         {
+            movSpeed = 10;
             Mov();
             Rot();
             ChangeWeaponSprite();
@@ -79,7 +81,12 @@ public class Player : MonoBehaviour
             Metralleta();
             activarDash();
             UltiShooting();
+            Timer();
             Hud();
+        }
+        else
+        {
+            movSpeed = 0;
         }
     }
 
@@ -117,11 +124,24 @@ public class Player : MonoBehaviour
         weapon.GetComponent<SpriteRenderer>().sprite = weaponSprites[bulletType];
     }
 
+    void Timer()
+    {
+        if (ignoreCollisionTimer > 0)
+        {
+            ignoreCollisionTimer -= Time.deltaTime;
+            if (ignoreCollisionTimer <= 0)
+            {
+                spriteRenderer.color = Color.white;
+            }
+        }
+    }
+
     void Mov()
     {
-        Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        playerInput.Normalize();
-        rb2D.velocity = playerInput.normalized * activeMoveSpeed;
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+
+        playerInput = new Vector2(moveX, moveY).normalized;
     }
 
     void Rot()
@@ -240,50 +260,71 @@ public class Player : MonoBehaviour
         }
     }
 
-
-    void activarDash()
+    private IEnumerator Dash()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        canDash = false;
+        isDah = true;
+
+        Vector3 playerPosition = transform.position;
+
+        Vector3 targetPosition = playerPosition + new Vector3(playerInput.x * dashSpeed, playerInput.y * dashSpeed, 0f);
+
+        RaycastHit2D hit = Physics2D.Raycast(targetPosition, Vector2.down, 0.1f, LayerMask.GetMask("Suelo"));
+
+        if (hit.collider)
         {
-            //StartCoroutine(PerformDodgeRoll());
-            if (dashCoolCounter <= 0 && dashCounter <= 0)
+            transform.position = targetPosition;
+            if (transform.position != playerPosition)
             {
+                yield return new WaitForSeconds(dashDuration);
+                ignoreCollisionTimer = ignoreCollisionDuration;
                 spriteRenderer.color = Color.green;
-                activeMoveSpeed = dashSpeed;
-                dashCounter = dashLeght;
             }
+            yield return new WaitForSeconds(dashCoolDown);
+            isDah = false;
+            canDash = true;
         }
-        if (dashCounter > 0)
+        else
         {
-            dashCounter -= Time.deltaTime;
-            if (dashCounter <= 0)
-            {
-                activeMoveSpeed = movSpeed;
-                dashCoolCounter = dashCooldown;
-                spriteRenderer.color = Color.white;
-            }
-        }
-        if (dashCoolCounter > 0)
-        {
-            dashCoolCounter -= Time.deltaTime;
+            spriteRenderer.color = Color.white;
+            isDah = false;
+            canDash = true;
         }
     }
 
-    /*IEnumerator PerformDodgeRoll()
+
+    void activarDash()
     {
-        isDodging = true;
-
-        Vector3 dodgeDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f).normalized;
-        Vector3 initialPosition = transform.position;
-
-        float elapsedTime = 0f;
-        while (elapsedTime < dodgeRollDuration)
+        if (isDah)
         {
-            transform.Translate(dodgeDirection * dodgeRollSpeed * Time.deltaTime);
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            return;
         }
+        if (Input.GetKey(KeyCode.Space) && canDash)
+        {
+            movSpeed = 0;
+            Vector3 moveDirection = new Vector3(playerInput.x, playerInput.y, 0f).normalized;
+            Vector3 targetPosition = transform.position + moveDirection * dashRadius;
 
-        isDodging = false;
-    }*/
+            RaycastHit2D hit = Physics2D.Raycast(targetPosition, Vector2.down, 0.1f, LayerMask.GetMask("Suelo"));
+
+            prevDash.SetActive(hit.collider && Input.GetKey(KeyCode.Space) && canDash && (playerInput != Vector2.zero));
+
+            if (hit.collider)
+            {
+                prevDash.transform.position = hit.point;
+                prevDash.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg + offset);
+                prevDash.gameObject.SetActive(true);
+            }
+        }
+        else if (playerInput == Vector2.zero)
+        {
+            prevDash.gameObject.SetActive(false);
+        }
+        if (Input.GetKeyUp(KeyCode.Space) && canDash)
+        {
+            prevDash.gameObject.SetActive(false);
+            StartCoroutine(Dash());
+        }
+    }
+
 }
