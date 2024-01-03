@@ -2870,7 +2870,7 @@ MonoBehaviour:
   dashRadius: 5
   sounds:
   - {fileID: 8300000, guid: 03def13735195ac48b9a775cd98fa78e, type: 3}
-  - {fileID: 8300000, guid: 147f9970432247e4ea7a723e9accf7d5, type: 3}
+  - {fileID: 8300000, guid: 86d0575c1149804488310c65c83df45d, type: 3}
   npcDialogo: {fileID: 153378653}
 --- !u!114 &1363702449
 MonoBehaviour:

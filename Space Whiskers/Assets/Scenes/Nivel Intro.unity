@@ -1129,7 +1129,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.08639584, y: 0.03140741}
   m_AnchorMax: {x: 0.88677096, y: 0.46288893}
-  m_AnchoredPosition: {x: 0.27001953, y: 26.509964}
+  m_AnchoredPosition: {x: 0.27001953, y: 26.509995}
   m_SizeDelta: {x: 8.38, y: 50.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159338294
@@ -12287,7 +12287,7 @@ MonoBehaviour:
   dashRadius: 5
   sounds:
   - {fileID: 8300000, guid: 03def13735195ac48b9a775cd98fa78e, type: 3}
-  - {fileID: 8300000, guid: 147f9970432247e4ea7a723e9accf7d5, type: 3}
+  - {fileID: 8300000, guid: 86d0575c1149804488310c65c83df45d, type: 3}
   npcDialogo: {fileID: 240212447}
 --- !u!114 &1015213021
 MonoBehaviour:
